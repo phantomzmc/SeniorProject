@@ -13,6 +13,10 @@
 		2A47891C1FCB3910006FB79E /* seniorProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A47891A1FCB3910006FB79E /* seniorProject.xcdatamodeld */; };
 		2A47891E1FCB3910006FB79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A47891D1FCB3910006FB79E /* Assets.xcassets */; };
 		2A4789211FCB3910006FB79E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A47891F1FCB3910006FB79E /* LaunchScreen.storyboard */; };
+		2AA85C071FE622A700184C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA85C061FE622A700184C90 /* GoogleService-Info.plist */; };
+		2AA85C0A1FE6D85800184C90 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA85C091FE6D85800184C90 /* LoginViewController.swift */; };
+		2AA85C0E1FE6E40800184C90 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA85C0D1FE6E40800184C90 /* Const.swift */; };
+		57E29F86162E150D92005C23 /* Pods_seniorProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B48185AA3E7379745FDF75 /* Pods_seniorProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,12 @@
 		2A47891D1FCB3910006FB79E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A4789201FCB3910006FB79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A4789221FCB3911006FB79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AA85C061FE622A700184C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2AA85C091FE6D85800184C90 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2AA85C0D1FE6E40800184C90 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		31B48185AA3E7379745FDF75 /* Pods_seniorProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_seniorProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B310042E470648505F824644 /* Pods-seniorProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seniorProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-seniorProject/Pods-seniorProject.debug.xcconfig"; sourceTree = "<group>"; };
+		DFF23EE19135B8A787A71224 /* Pods-seniorProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seniorProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-seniorProject/Pods-seniorProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57E29F86162E150D92005C23 /* Pods_seniorProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				2A4789121FCB3910006FB79E /* seniorProject */,
 				2A4789111FCB3910006FB79E /* Products */,
+				6708F6C77EEEDAB4EA0E5C8B /* Pods */,
+				B896242C6436B68B7807E801 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +69,51 @@
 		2A4789121FCB3910006FB79E /* seniorProject */ = {
 			isa = PBXGroup;
 			children = (
+				2AA85C0C1FE6E3E200184C90 /* Model */,
+				2AA85C081FE6D83A00184C90 /* Controller */,
 				2A4789131FCB3910006FB79E /* AppDelegate.swift */,
-				2A4789151FCB3910006FB79E /* ViewController.swift */,
 				2A4789171FCB3910006FB79E /* Main.storyboard */,
 				2A47891D1FCB3910006FB79E /* Assets.xcassets */,
 				2A47891F1FCB3910006FB79E /* LaunchScreen.storyboard */,
 				2A4789221FCB3911006FB79E /* Info.plist */,
 				2A47891A1FCB3910006FB79E /* seniorProject.xcdatamodeld */,
+				2AA85C061FE622A700184C90 /* GoogleService-Info.plist */,
 			);
 			path = seniorProject;
+			sourceTree = "<group>";
+		};
+		2AA85C081FE6D83A00184C90 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A4789151FCB3910006FB79E /* ViewController.swift */,
+				2AA85C091FE6D85800184C90 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2AA85C0C1FE6E3E200184C90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2AA85C0D1FE6E40800184C90 /* Const.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6708F6C77EEEDAB4EA0E5C8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B310042E470648505F824644 /* Pods-seniorProject.debug.xcconfig */,
+				DFF23EE19135B8A787A71224 /* Pods-seniorProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B896242C6436B68B7807E801 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31B48185AA3E7379745FDF75 /* Pods_seniorProject.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A4789251FCB3911006FB79E /* Build configuration list for PBXNativeTarget "seniorProject" */;
 			buildPhases = (
+				5AB54BAFB5EDFC7B8E07D1D7 /* [CP] Check Pods Manifest.lock */,
 				2A47890C1FCB3910006FB79E /* Sources */,
 				2A47890D1FCB3910006FB79E /* Frameworks */,
 				2A47890E1FCB3910006FB79E /* Resources */,
+				2DA40B8D6139DBFBC804CD8A /* [CP] Embed Pods Frameworks */,
+				6E2432C9A01768EEAA0F8925 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A4789211FCB3910006FB79E /* LaunchScreen.storyboard in Resources */,
+				2AA85C071FE622A700184C90 /* GoogleService-Info.plist in Resources */,
 				2A47891E1FCB3910006FB79E /* Assets.xcassets in Resources */,
 				2A4789191FCB3910006FB79E /* Main.storyboard in Resources */,
 			);
@@ -134,14 +187,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DA40B8D6139DBFBC804CD8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-seniorProject/Pods-seniorProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-seniorProject/Pods-seniorProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AB54BAFB5EDFC7B8E07D1D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-seniorProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E2432C9A01768EEAA0F8925 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-seniorProject/Pods-seniorProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2A47890C1FCB3910006FB79E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA85C0A1FE6D85800184C90 /* LoginViewController.swift in Sources */,
 				2A47891C1FCB3910006FB79E /* seniorProject.xcdatamodeld in Sources */,
 				2A4789161FCB3910006FB79E /* ViewController.swift in Sources */,
 				2A4789141FCB3910006FB79E /* AppDelegate.swift in Sources */,
+				2AA85C0E1FE6E40800184C90 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +391,7 @@
 		};
 		2A4789261FCB3911006FB79E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B310042E470648505F824644 /* Pods-seniorProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +407,7 @@
 		};
 		2A4789271FCB3911006FB79E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFF23EE19135B8A787A71224 /* Pods-seniorProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
