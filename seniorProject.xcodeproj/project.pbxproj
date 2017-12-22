@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A44A9431FE98E62001CE87C /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A44A9421FE98E62001CE87C /* RegisterTableViewController.swift */; };
 		2A4789141FCB3910006FB79E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4789131FCB3910006FB79E /* AppDelegate.swift */; };
 		2A4789161FCB3910006FB79E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4789151FCB3910006FB79E /* ViewController.swift */; };
 		2A4789191FCB3910006FB79E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4789171FCB3910006FB79E /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A44A9421FE98E62001CE87C /* RegisterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
 		2A4789101FCB3910006FB79E /* seniorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seniorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4789131FCB3910006FB79E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A4789151FCB3910006FB79E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				2A4789151FCB3910006FB79E /* ViewController.swift */,
 				2AA85C091FE6D85800184C90 /* LoginViewController.swift */,
+				2A44A9421FE98E62001CE87C /* RegisterTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				2A47891C1FCB3910006FB79E /* seniorProject.xcdatamodeld in Sources */,
 				2A4789161FCB3910006FB79E /* ViewController.swift in Sources */,
 				2A4789141FCB3910006FB79E /* AppDelegate.swift in Sources */,
+				2A44A9431FE98E62001CE87C /* RegisterTableViewController.swift in Sources */,
 				2AA85C0E1FE6E40800184C90 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

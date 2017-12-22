@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -42,6 +43,19 @@ class LoginViewController: UIViewController {
         else {
             passwordEditText.backgroundColor = UIColor.white
         }
+        let email = emailEditText.text
+        let password = passwordEditText.text
+        
+        Auth.auth().signIn(withEmail: email!, password: password!) { (firebaseUser, firebaseError) in
+            if let error = firebaseError {
+                Const().ShowAlert(title: "เกิดข้อผิดพลาด", messeage: error.localizedDescription, viewController: self)
+                return
+            }else {
+                Const().ShowAlert(title: "สำเร็จ", messeage: "ยินดีต้อนรับ", viewController: self)
+                return
+            }
+        }
+        
     }
     
     @IBAction func RegisterClick(_ sender: Any) {
