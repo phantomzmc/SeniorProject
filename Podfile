@@ -6,6 +6,8 @@ target 'seniorProject' do
   use_frameworks!
 
   # Pods for seniorProject
+pod 'UIColor_Hex_Swift'
+
 pod 'FirebaseDatabase'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'

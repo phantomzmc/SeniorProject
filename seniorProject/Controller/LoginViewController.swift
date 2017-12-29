@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    @IBAction func RegisterClick(_ sender: Any) {
+    @IBAction func RegisterClick(_ sender: UIStoryboardSegue) {
     }
     
     @IBAction func ForgetPasswordClick(_ sender: Any) {
