@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A00F95A200168450035D550 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00F959200168450035D550 /* EventsTableViewController.swift */; };
 		2A2461761FF2E6F700EC3B60 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2461751FF2E6F700EC3B60 /* RegisterViewController.swift */; };
 		2A4789141FCB3910006FB79E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4789131FCB3910006FB79E /* AppDelegate.swift */; };
 		2A4789161FCB3910006FB79E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4789151FCB3910006FB79E /* ViewController.swift */; };
@@ -14,13 +15,16 @@
 		2A47891C1FCB3910006FB79E /* seniorProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A47891A1FCB3910006FB79E /* seniorProject.xcdatamodeld */; };
 		2A47891E1FCB3910006FB79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A47891D1FCB3910006FB79E /* Assets.xcassets */; };
 		2A4789211FCB3910006FB79E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A47891F1FCB3910006FB79E /* LaunchScreen.storyboard */; };
+		2A600D271FFED3C10097EC7B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A600D261FFED3C10097EC7B /* ProfileViewController.swift */; };
 		2AA85C071FE622A700184C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA85C061FE622A700184C90 /* GoogleService-Info.plist */; };
 		2AA85C0A1FE6D85800184C90 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA85C091FE6D85800184C90 /* LoginViewController.swift */; };
 		2AA85C0E1FE6E40800184C90 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA85C0D1FE6E40800184C90 /* Const.swift */; };
+		2AAD62381FFEBC12009752D4 /* SOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD62371FFEBC12009752D4 /* SOSViewController.swift */; };
 		57E29F86162E150D92005C23 /* Pods_seniorProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B48185AA3E7379745FDF75 /* Pods_seniorProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A00F959200168450035D550 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		2A2461751FF2E6F700EC3B60 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2A4789101FCB3910006FB79E /* seniorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seniorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4789131FCB3910006FB79E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,9 +34,11 @@
 		2A47891D1FCB3910006FB79E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A4789201FCB3910006FB79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A4789221FCB3911006FB79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A600D261FFED3C10097EC7B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2AA85C061FE622A700184C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AA85C091FE6D85800184C90 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2AA85C0D1FE6E40800184C90 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		2AAD62371FFEBC12009752D4 /* SOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSViewController.swift; sourceTree = "<group>"; };
 		31B48185AA3E7379745FDF75 /* Pods_seniorProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_seniorProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B310042E470648505F824644 /* Pods-seniorProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seniorProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-seniorProject/Pods-seniorProject.debug.xcconfig"; sourceTree = "<group>"; };
 		DFF23EE19135B8A787A71224 /* Pods-seniorProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seniorProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-seniorProject/Pods-seniorProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +96,9 @@
 				2A4789151FCB3910006FB79E /* ViewController.swift */,
 				2AA85C091FE6D85800184C90 /* LoginViewController.swift */,
 				2A2461751FF2E6F700EC3B60 /* RegisterViewController.swift */,
+				2AAD62371FFEBC12009752D4 /* SOSViewController.swift */,
+				2A600D261FFED3C10097EC7B /* ProfileViewController.swift */,
+				2A00F959200168450035D550 /* EventsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -259,9 +268,12 @@
 			files = (
 				2AA85C0A1FE6D85800184C90 /* LoginViewController.swift in Sources */,
 				2A47891C1FCB3910006FB79E /* seniorProject.xcdatamodeld in Sources */,
+				2A00F95A200168450035D550 /* EventsTableViewController.swift in Sources */,
 				2A4789161FCB3910006FB79E /* ViewController.swift in Sources */,
 				2A2461761FF2E6F700EC3B60 /* RegisterViewController.swift in Sources */,
+				2AAD62381FFEBC12009752D4 /* SOSViewController.swift in Sources */,
 				2A4789141FCB3910006FB79E /* AppDelegate.swift in Sources */,
+				2A600D271FFED3C10097EC7B /* ProfileViewController.swift in Sources */,
 				2AA85C0E1FE6E40800184C90 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
