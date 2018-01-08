@@ -7,24 +7,35 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class EventsTableViewController: UITableViewController  {
     @IBOutlet weak var eventTableView : UITableView!
-//    @IBOutlet weak var eventImgView : UIImageView?
-//    @IBOutlet weak var dateLabel : UILabel?
-//    @IBOutlet weak var monthLabel : UILabel?
-//    @IBOutlet weak var eventNameLabel : UILabel?
-//    @IBOutlet weak var detaileventLabel : UILabel?
-
+    var eventArr = [AnyObject]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        Alamofire.request("http://www.mocky.io/v2/5a5231f12e00001c27c03a6e").responseJSON { (responseData) in
+//            let result = responseData.result
+//            if let dict = result.value as? Dictionary<String,AnyObject> {
+//                if let innerDict = dict ["events"]{
+//                    self.eventArr = innerDict as! [AnyObject]
+//                    self.eventTableView.reloadData()
+//                }
+//            }
+//
+//        }
+//    }
+    }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -45,11 +56,20 @@ class EventsTableViewController: UITableViewController  {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as? EventsTableViewCell
+//        let dictShow = eventArr[indexPath.row]
+        cell?.eventDateLabel.text = "\(indexPath.row)"
+        cell?.eventNameLabel.text = "ตรวจกระดูก"
+        cell?.eventDetailLabel.text = "รพ.ราม"
+        cell?.eventMonthLabel.text = "มีนาคม "
+
+//        if indexPath.row % 2 == 0 {
+//            cell?.eventImageView.image = UIImage("")
+//        }
 
         // Configure the cell...
 
-        return cell
+        return cell!
     }
 
 

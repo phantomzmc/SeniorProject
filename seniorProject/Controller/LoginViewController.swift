@@ -51,7 +51,13 @@ class LoginViewController: UIViewController {
                 Const().ShowAlert(title: "เกิดข้อผิดพลาด", messeage: error.localizedDescription, viewController: self)
                 return
             }else {
-                Const().ShowAlert(title: "สำเร็จ", messeage: "ยินดีต้อนรับ", viewController: self)
+                let alert = UIAlertController(title: "ยินดีต้อนรับ", message: "Email : ", preferredStyle: .alert)
+                let resultAlert = UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
+                let eventView = self.storyboard?.instantiateViewController(withIdentifier: "TabbarApp")
+                    self.navigationController?.pushViewController(eventView!, animated: true)
+                })
+                alert.addAction(resultAlert)
+                self.present(alert, animated: true, completion: nil)
                 return
             }
         }
