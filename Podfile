@@ -7,10 +7,9 @@ target 'seniorProject' do
 
   # Pods for seniorProject
 pod 'UIColor_Hex_Swift'
-pod 'Alamofire'
-pod 'SwiftyJSON'
 
-pod 'FirebaseDatabase'
+pod ‘Firebase’
+pod 'Firebase/Database’
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 
