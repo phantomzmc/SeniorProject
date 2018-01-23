@@ -9,9 +9,10 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
-    @IBOutlet var avatarImage : UIImageView!
     
+    var profilecontainer : ProfileContainerViewController!
+    @IBOutlet var avatarImage : UIImageView!
+    @IBOutlet weak var profileSegmentControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +26,23 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func profileSegmentCortroller(_ sender: Any) {
+        if(profileSegmentControl?.selectedSegmentIndex == 0)
+        {
+            profilecontainer.segueIdentifierReceivedFromParent("showprofile")
+        }
+        else if(profileSegmentControl?.selectedSegmentIndex == 1)
+        {
+            profilecontainer.segueIdentifierReceivedFromParent("editprofile")
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "profilecontainer"{
+            self.profilecontainer =  segue.destination as! ProfileContainerViewController
+        }
+        
+    }
+    
     /*
     // MARK: - Navigation
 

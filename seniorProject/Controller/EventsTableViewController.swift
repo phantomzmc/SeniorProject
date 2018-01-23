@@ -9,31 +9,28 @@
 import UIKit
 
 
-class EventsTableViewController: UITableViewController  {
+class EventsTableViewController: UITableViewController {
     @IBOutlet weak var eventTableView : UITableView!
-    var eventArr = [AnyObject]()
+    let eventName : [String] = ["กายภาพบำบัด","ตรวจเลือด","กินข้าวนอกบ้าน","ตรวจสุขภาพประจำปี"]
+    let eventDate : [Int] = [22,25,1,10]
+    let eventDetail : [String] = ["รับปริญญาที่ มช","รพ.สวนดอก","รพ.ราม","ไม่ได้กำหนด"]
+    let eventmonth : [String] = ["มกราคม","มกราคม","กุมภาพันธ์","มีนาคม"]
+    let eventPic : [String] = ["1.jpg","2.jpg","3.jpg","4.jpg"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        Alamofire.request("http://www.mocky.io/v2/5a5231f12e00001c27c03a6e").responseJSON { (responseData) in
-//            let result = responseData.result
-//            if let dict = result.value as? Dictionary<String,AnyObject> {
-//                if let innerDict = dict ["events"]{
-//                    self.eventArr = innerDict as! [AnyObject]
-//                    self.eventTableView.reloadData()
-//                }
-//            }
-//
-//        }
-//    }
+        eventTableView.delegate = self
+        eventTableView.dataSource = self
+        
     }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    
     
 
     override func didReceiveMemoryWarning() {
@@ -50,17 +47,18 @@ class EventsTableViewController: UITableViewController  {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return eventName.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as? EventsTableViewCell
 //        let dictShow = eventArr[indexPath.row]
-        cell?.eventDateLabel.text = "\(indexPath.row)"
-        cell?.eventNameLabel.text = "ตรวจกระดูก"
-        cell?.eventDetailLabel.text = "รพ.ราม"
-        cell?.eventMonthLabel.text = "มีนาคม "
+        cell?.eventDateLabel.text = "\(eventDate[indexPath.row])"
+        cell?.eventNameLabel.text = eventName[indexPath.row]
+        cell?.eventDetailLabel.text = eventDetail[indexPath.row]
+        cell?.eventMonthLabel.text = eventmonth[indexPath.row]
+        cell?.eventImageView.image = UIImage(named:self.eventPic[indexPath.row])
 
 //        if indexPath.row % 2 == 0 {
 //            cell?.eventImageView.image = UIImage("")

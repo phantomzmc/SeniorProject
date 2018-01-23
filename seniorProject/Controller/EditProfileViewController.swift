@@ -1,34 +1,28 @@
 //
-//  DataHealtyViewController.swift
+//  EditProfileViewController.swift
 //  seniorProject
 //
-//  Created by iThunnathorn  on 1/20/2561 BE.
+//  Created by iThunnathorn  on 1/22/2561 BE.
 //  Copyright © 2561 Thannathrn Yuwasin. All rights reserved.
 //
 
 import UIKit
-import FirebaseAuth
 
-class DataHealtyViewController: UIViewController {
-    @IBOutlet weak var viewHeigh : UIView?
-    @IBOutlet weak var viewWeigth : UIView?
-    @IBOutlet weak var viewCA : UIView?
-    @IBOutlet weak var viewPill : UIView?
+class EditProfileViewController: UIViewController {
 
+    @IBOutlet weak var fullnameTextField: UITextField!
+    @IBOutlet weak var genTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var daTextField: UITextField!
+    @IBOutlet weak var pillTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewCA?.layer.cornerRadius = 25
-        viewPill?.layer.cornerRadius = 25
-        viewHeigh?.layer.cornerRadius = 25
-        viewWeigth?.layer.cornerRadius = 25
-        
-        
-
-        
 
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func submitEditProfileCilck(_ sender: Any) {
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

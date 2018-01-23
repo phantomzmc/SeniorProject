@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HealtyViewController: UIViewController {
     
@@ -15,8 +16,23 @@ class HealtyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        func login() {
+            if (Auth.auth().currentUser == nil) {
+                let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginView") as! LoginViewController
+                let navigationController = UINavigationController (rootViewController: loginVC)
+                self.present(navigationController,animated: true, completion: nil)
+            }
+        }
+        
         // Do any additional setup after loading the view.
+    }
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+        }catch let error as NSError{
+            print(error.localizedDescription)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +56,14 @@ class HealtyViewController: UIViewController {
         self.container =  segue.destination as! ContainerViewController
         }
 
+    }
+    @IBAction func logoutButton(_ sender: Any) {
+        logout()
+        if (Auth.auth().currentUser == nil) {
+            let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginView") as! LoginViewController
+            let navigationController = UINavigationController (rootViewController: loginVC)
+            self.present(navigationController,animated: true, completion: nil)
+        }
     }
     
     /*

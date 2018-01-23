@@ -55,11 +55,10 @@ class LoginViewController: UIViewController {
             }else {
                 let alert = UIAlertController(title: "ยินดีต้อนรับ", message: "Email : ", preferredStyle: .alert)
                 let resultAlert = UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
-                    let eventView = self.storyboard?.instantiateViewController(withIdentifier: "TabbarApp") as! UIViewController
-                    self.navigationController?.pushViewController(eventView, animated: true)
+                    
                 })
                 alert.addAction(resultAlert)
-                self.present(alert, animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
                 return
             }
         }
