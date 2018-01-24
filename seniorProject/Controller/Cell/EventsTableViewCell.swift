@@ -19,7 +19,7 @@ class EventsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        eventImageView.layer.cornerRadius = 20
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 
 class EventsTableViewController: UITableViewController {
+    //http://www.mocky.io/v2/5a68d5b02e0000ea2bd5b5c8
+    
+    var eventsdata :[EventData] = []
+    
     @IBOutlet weak var eventTableView : UITableView!
-    let eventName : [String] = ["กายภาพบำบัด","ตรวจเลือด","กินข้าวนอกบ้าน","ตรวจสุขภาพประจำปี"]
-    let eventDate : [Int] = [22,25,1,10]
-    let eventDetail : [String] = ["รับปริญญาที่ มช","รพ.สวนดอก","รพ.ราม","ไม่ได้กำหนด"]
-    let eventmonth : [String] = ["มกราคม","มกราคม","กุมภาพันธ์","มีนาคม"]
-    let eventPic : [String] = ["1.jpg","2.jpg","3.jpg","4.jpg"]
+//    let eventName : [String] = ["กายภาพบำบัด","ตรวจเลือด","กินข้าวนอกบ้าน","ตรวจสุขภาพประจำปี"]
+//    let eventDate : [Int] = [22,25,1,10]
+//    let eventDetail : [String] = ["รับปริญญาที่ มช","รพ.สวนดอก","รพ.ราม","ไม่ได้กำหนด"]
+//    let eventmonth : [String] = ["มกราคม","มกราคม","กุมภาพันธ์","มีนาคม"]
+//    let eventPic : [String] = ["1.jpg","2.jpg","3.jpg","4.jpg"]
     
     
     override func viewDidLoad() {
@@ -23,6 +29,28 @@ class EventsTableViewController: UITableViewController {
         
         eventTableView.delegate = self
         eventTableView.dataSource = self
+        
+        Alamofire.request("http://www.mocky.io/v2/5a68d5b02e0000ea2bd5b5c8").responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+                
+                let dict:NSDictionary = json as! NSDictionary
+                
+                let eventsArray = dict.object(forKey: "events") as! NSArray
+                
+                for eventsJson in eventsArray {
+                    let eventsDict = eventsJson as! NSDictionary
+                    let event:EventData = EventData(json: eventsDict)
+                    self.eventsdata.append(event)
+                }
+                self.eventTableView.reloadData()
+                
+            }
+        }
         
     }
         // Uncomment the following line to preserve selection between presentations
@@ -47,18 +75,35 @@ class EventsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return eventName.count
+        return eventsdata.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as? EventsTableViewCell
 //        let dictShow = eventArr[indexPath.row]
-        cell?.eventDateLabel.text = "\(eventDate[indexPath.row])"
-        cell?.eventNameLabel.text = eventName[indexPath.row]
-        cell?.eventDetailLabel.text = eventDetail[indexPath.row]
-        cell?.eventMonthLabel.text = eventmonth[indexPath.row]
-        cell?.eventImageView.image = UIImage(named:self.eventPic[indexPath.row])
+        let event = eventsdata[indexPath.row]
+        if let eventname = event.eventName {
+            cell?.eventNameLabel.text = eventname
+        }else{
+            cell?.eventNameLabel.text = "-"
+        }
+        if let eventImageView = event.eventPic {
+            cell?.eventImageView.kf.setImage(with: URL(string:eventImageView))
+        }else{
+            cell?.eventImageView.image = UIImage(named: "1.jpg")
+        }
+        if let eventdate = event.eventDate {
+            cell?.eventDateLabel.text = "\(eventdate)"
+        }
+        //cell?.eventDateLabel.text = event."\(eventDate[indexPath.row])"
+        if let eventdetail = event.eventDetail {
+            cell?.eventDetailLabel.text = eventdetail
+        }
+        if let eventmonth = event.eventMonth {
+            cell?.eventMonthLabel.text = eventmonth
+        }
+
 
 //        if indexPath.row % 2 == 0 {
 //            cell?.eventImageView.image = UIImage("")
@@ -67,6 +112,21 @@ class EventsTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell!
+    }
+    func eventTableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        eventTableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "gotoSubView", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "gotoSubView") {
+            let detailEventViewController:DetailEventViewController = segue.destination as! DetailEventViewController
+            var indexPath:IndexPath = sender as! IndexPath
+            detailEventViewController.eventdata = eventsdata[indexPath.row]
+            
+        }
+    }
+    @IBAction func unwindgotoSubView(segue: UIStoryboardSegue) {
     }
 
 

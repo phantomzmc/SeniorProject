@@ -7,7 +7,8 @@ target 'seniorProject' do
 
   # Pods for seniorProject
 pod 'UIColor_Hex_Swift'
-
+pod 'Kingfisher'
+pod 'Alamofire'
 pod ‘Firebase’
 pod 'Firebase/Database’
 pod 'Firebase/Core'

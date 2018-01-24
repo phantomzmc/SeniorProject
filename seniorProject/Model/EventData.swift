@@ -7,16 +7,30 @@
 //
 
 import Foundation
-class EventData {
-    let eventDate : String
-    let eventName : String
-    let eventDetail : String
-    let eventMonth : String
+class EventData : NSObject {
+    var eventName : String!
+    var eventDetail : String?
+    var eventDate : Int!
+    var eventMonth : String!
+    var eventPic : String?
     
-    init(eventDate : String, eventName : String , eventDetail : String , eventMonth : String) {
-        self.eventDate = eventDate
+    init(eventName : String , eventDetail : String ,eventDate : Int,  eventMonth : String, eventPic : String) {
         self.eventName = eventName
         self.eventDetail = eventDetail
+        self.eventDate = eventDate
         self.eventMonth = eventMonth
+        self.eventPic = eventPic
+    }
+    init (json:NSDictionary?) {
+        self.eventName = json?.object(forKey: "name") as! String
+        self.eventDetail = json?.object(forKey: "detail") as? String
+        self.eventDate = json?.object(forKey: "date") as! Int
+        self.eventMonth = json?.object(forKey: "month") as! String
+        self.eventPic = json?.object(forKey: "pic") as? String
+    }
+    override init() {
+        self.eventName = ""
+        self.eventDate = 0
+        self.eventMonth = ""
     }
 }

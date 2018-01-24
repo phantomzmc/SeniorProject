@@ -8,25 +8,34 @@
 
 import UIKit
 
+import Kingfisher
+
 
 class DetailEventViewController: UIViewController {
+    
+    var eventdata:EventData!
+    
+    @IBOutlet weak var detailEventDate : UILabel!
+    @IBOutlet weak var detailEventName : UILabel!
+    @IBOutlet weak var detailEventMonth : UILabel!
+    @IBOutlet weak var detailEventDetail : UILabel!
+    @IBOutlet weak var detailEventPic : UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        detailEventMonth?.text = eventdata.eventMonth
+        detailEventName?.text = eventdata.eventName
+        detailEventDate?.text = "\(eventdata.eventDate)"
+        detailEventDetail?.text = eventdata.eventDetail
         
-//        Alamofire.request("http://www.mocky.io/v2/5a5231f12e00001c27c03a6e").responseJSON { response in
-//            print("Request: \(String(describing: response.request))")   // original url request
-//            print("Response: \(String(describing: response.response))") // http url response
-//            print("Result: \(response.result)")                         // response serialization result
-//            
-//            if let json = response.result.value {
-//                print("JSON: \(json)") // serialized json response
-//            }
-//            
-//            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//                print("Data: \(utf8Text)") // original server data as UTF8 string
-//            }
-//        }
+        if let eventPic = eventdata.eventPic {
+            detailEventPic?.kf.setImage(with: URL(string:eventPic))
+        }else{
+            detailEventPic?.image = UIImage(named: "1.jpg")
+        }
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,3 +55,4 @@ class DetailEventViewController: UIViewController {
     */
 
 }
+

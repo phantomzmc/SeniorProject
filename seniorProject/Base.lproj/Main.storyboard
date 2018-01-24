@@ -445,7 +445,7 @@
                                     <outlet property="eventImageView" destination="GIB-6n-v2h" id="4VB-17-hSN"/>
                                     <outlet property="eventMonthLabel" destination="Dug-TG-GwY" id="EWr-hb-a3X"/>
                                     <outlet property="eventNameLabel" destination="SfA-Dm-12W" id="e8b-p8-oTi"/>
-                                    <segue destination="5Gw-ys-2XU" kind="show" id="Nk3-l0-n0o"/>
+                                    <segue destination="5Gw-ys-2XU" kind="show" identifier="gotoSubview" id="Nk3-l0-n0o"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -556,6 +556,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m9W-D4-vdC"/>
                     </view>
+                    <connections>
+                        <outlet property="detailEventDate" destination="a4z-2A-ex4" id="wmS-Je-QNo"/>
+                        <outlet property="detailEventDetail" destination="g7U-bP-Jri" id="SFg-aj-kBI"/>
+                        <outlet property="detailEventMonth" destination="nc2-oW-6xd" id="qxT-Nq-HaN"/>
+                        <outlet property="detailEventName" destination="Fda-Fj-TtY" id="G0p-rv-31p"/>
+                        <outlet property="detailEventPic" destination="ceR-TU-5br" id="1xg-V5-Aal"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jic-jm-e8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1077,6 +1084,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="398" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="dV4-E0-7aO"/>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="firstLinkedSubView" value="showprofile"/>
