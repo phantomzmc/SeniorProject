@@ -7,12 +7,39 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 class FeedHealtyTableViewController: UITableViewController {
+    //http://www.mocky.io/v2/5a6987902e0000610f7a74af
+    
+    var feedhealth : [HealthData] = []
     @IBOutlet weak var feedTableView : UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Alamofire.request("http://www.mocky.io/v2/5a6987902e0000610f7a74af").responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+                
+                let dict:NSDictionary = json as! NSDictionary
+                
+                let healthArray = dict.object(forKey: "health") as! NSArray
+                
+                for healthJson in healthArray {
+                    let healthDict = healthJson as! NSDictionary
+                    let health:HealthData = HealthData(json: healthDict)
+                    self.feedhealth.append(health)
+                }
+                self.feedTableView.reloadData()
+                
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,13 +62,29 @@ class FeedHealtyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return feedhealth.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Feedcell", for: indexPath) as? FeedHealtyTableViewCell
-        cell?.feedNameLable.text = "ชื่อ"
+        let health = feedhealth[indexPath.row]
+        if let healthName = health.healthName {
+            cell?.feedNameLable.text = healthName
+        }else{
+            cell?.feedNameLable.text = "-"
+        }
+        if let healthDetail = health.healthDetail{
+            cell?.feeddetailLabel.text = healthDetail
+        }else{
+            cell?.feeddetailLabel.text = "-"
+        }
+        if let healthImageView = health.healthPic {
+            cell?.feedImageView.kf.setImage(with: URL(string:healthImageView))
+        }else{
+            cell?.feedImageView.image = UIImage(named: "1.jpg")
+        }
+        
         cell?.feeddetailLabel.text = "รายละเอียด"
         return cell!
     }
