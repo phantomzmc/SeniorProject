@@ -113,21 +113,20 @@ class EventsTableViewController: UITableViewController {
 
         return cell!
     }
-    func eventTableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        eventTableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "gotoSubView", sender: indexPath)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "gotoSubView") {
-            let detailEventViewController:DetailEventViewController = segue.destination as! DetailEventViewController
-            var indexPath:IndexPath = sender as! IndexPath
-            detailEventViewController.eventdata = eventsdata[indexPath.row]
-            
-        }
-    }
-    @IBAction func unwindgotoSubView(segue: UIStoryboardSegue) {
-    }
+//    func eventTableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+//        eventTableView.deselectRow(at: indexPath, animated: true)
+//        performSegue(withIdentifier: "gotoSubView", sender: indexPath)
+//
+//    }
+//    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == "gotoSubView") {
+//            let detailEventViewController = segue.destination as! DetailEventViewController
+//            var indexPath:IndexPath = sender as! IndexPath
+//            detailEventViewController.event = eventsdata[indexPath.row]
+//            
+//        }
+//    }
 
 
     /*

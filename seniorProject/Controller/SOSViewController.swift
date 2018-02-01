@@ -30,6 +30,27 @@ class SOSViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func SOSbutton (sender : Any) {
+        if let phoneCallURL = URL(string: "tel://1669") {
+            
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        }
+        
+    }
+    @IBAction func Telbutton (sender : Any) {
+        let phoneNumber = 0903198808
+        if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+            
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

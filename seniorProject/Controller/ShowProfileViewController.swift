@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class ShowProfileViewController: UIViewController {
+    
+
+    var dataProfile = [RegisterData]()
+    var ref = Database.database().reference(withPath : "Member").child("jintana singjit")
 
     @IBOutlet weak var fullnameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -16,11 +21,26 @@ class ShowProfileViewController: UIViewController {
     @IBOutlet weak var daLabel: UILabel!
     @IBOutlet weak var pillLabel: UILabel!
     
+    func fetchData (){
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            var dataArr = [RegisterData]()
+            for item in snapshot.children {
+                let cateData = RegisterData(snapshot : item as! DataSnapshot)
+                dataArr.append(cateData)
+            }
+            self.dataProfile = dataArr
+        }
+    }
+    
     
     override func viewDidLoad() {
         
         
         super.viewDidLoad()
+//        let event = eventsdata[indexPath.row]
+//        if let eventname = event.eventName {
+//            cell?.eventNameLabel.text = eventname
+        
 
         // Do any additional setup after loading the view.
     }

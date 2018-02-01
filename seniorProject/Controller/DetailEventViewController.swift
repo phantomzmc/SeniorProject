@@ -13,7 +13,7 @@ import Kingfisher
 
 class DetailEventViewController: UIViewController {
     
-    var eventdata:EventData!
+    var event:EventData!
     
     @IBOutlet weak var detailEventDate : UILabel!
     @IBOutlet weak var detailEventName : UILabel!
@@ -24,12 +24,12 @@ class DetailEventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailEventMonth?.text = eventdata.eventMonth
-        detailEventName?.text = eventdata.eventName
-        detailEventDate?.text = "\(eventdata.eventDate)"
-        detailEventDetail?.text = eventdata.eventDetail
+        detailEventMonth?.text = event.eventMonth
+        detailEventName?.text = event.eventName
+        detailEventDate?.text = "\(event.eventDate)"
+        detailEventDetail?.text = event.eventDetail
         
-        if let eventPic = eventdata.eventPic {
+        if let eventPic = event.eventPic {
             detailEventPic?.kf.setImage(with: URL(string:eventPic))
         }else{
             detailEventPic?.image = UIImage(named: "1.jpg")

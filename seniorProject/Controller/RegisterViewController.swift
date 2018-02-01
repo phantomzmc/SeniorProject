@@ -8,19 +8,30 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
+    var ref = DatabaseReference()
     
     @IBOutlet weak var viewRegis: UIView!
     @IBOutlet weak var usernameTextfied : UITextField!
     @IBOutlet weak var passwordTextfied : UITextField!
     @IBOutlet weak var confirmPasswordTextfied : UITextField!
+    @IBOutlet weak var userTextfied : UITextField!
+    @IBOutlet weak var ageTextfied : UITextField!
+    @IBOutlet weak var DATextfied : UITextField!
+    @IBOutlet weak var pillTextfied : UITextField!
+    @IBOutlet weak var telTextfied : UITextField!
+    @IBOutlet weak var sosUserTextfied : UITextField!
+    @IBOutlet weak var sosTelTextfied : UITextField!
+
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
     }
 
     @IBAction func submitRegister(_ sender: Any) {
@@ -49,12 +60,24 @@ class RegisterViewController: UIViewController {
             
             let email = usernameTextfied.text
             let password = passwordTextfied.text
+            let username = userTextfied.text
+            let age = ageTextfied.text
+            let DA = DATextfied.text
+            let pill = pillTextfied.text
+            let tel = telTextfied.text
+            let sosUser = sosUserTextfied.text
+            let sosTel = sosTelTextfied.text
+            
             
             Auth.auth().createUser(withEmail: email!, password: password!, completion: { (firebaseUser, firebaseError) in
                 if let error = firebaseError {
                     Const().ShowAlert(title: "เกิดข้อผิดพลาด", messeage: error.localizedDescription, viewController: self)
                     return
                 }else {
+                    self.ref = Database.database().reference(withPath:"Member")
+                    let registerData = RegisterData (email: email!, username: username!, age: age!, DA: DA!, pill: pill!, tel: tel!, sosUser: sosUser!, sosTel: sosTel!)
+                    let registerRef = self.ref.child(username!).child("Profile")
+                    registerRef.setValue(registerData.toAnyObject())
                     let alert = UIAlertController(title: "สำเร็จ", message: "สมัครสมาชิกสำเร็จ", preferredStyle: .alert)
                     let resultAlert = UIAlertAction(title: "OK", style: .default , handler: { (alertAction) in
                         self.navigationController?.popViewController(animated: true)

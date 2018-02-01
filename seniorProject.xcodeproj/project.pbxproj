@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2A00F95A200168450035D550 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00F959200168450035D550 /* EventsTableViewController.swift */; };
 		2A00F95C20020F630035D550 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00F95B20020F630035D550 /* EventsTableViewCell.swift */; };
+		2A1265912020CE4F008E0CFB /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1265902020CE4F008E0CFB /* RegisterData.swift */; };
+		2A12659320211313008E0CFB /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A12659220211313008E0CFB /* AddEventViewController.swift */; };
+		2A126595202115BC008E0CFB /* AddEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A126594202115BC008E0CFB /* AddEvent.swift */; };
 		2A2461761FF2E6F700EC3B60 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2461751FF2E6F700EC3B60 /* RegisterViewController.swift */; };
 		2A2E64C82015BB810078F9D8 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2E64C72015BB810078F9D8 /* ProfileData.swift */; };
 		2A2E64CB2015C3C20078F9D8 /* ProfileContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2E64CA2015C3C20078F9D8 /* ProfileContainerViewController.swift */; };
@@ -41,12 +44,16 @@
 		2AD87CF320139C8E00B660AA /* DataHealtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD87CF220139C8E00B660AA /* DataHealtyViewController.swift */; };
 		2AD87CF52013A66300B660AA /* FeedHealtyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD87CF42013A66300B660AA /* FeedHealtyTableViewCell.swift */; };
 		2AD87CF72013A79500B660AA /* FeedHealtyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD87CF62013A79500B660AA /* FeedHealtyTableViewController.swift */; };
+		2AE2C12D2019B7C2009839BF /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2C12C2019B7C2009839BF /* HealthData.swift */; };
 		57E29F86162E150D92005C23 /* Pods_seniorProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B48185AA3E7379745FDF75 /* Pods_seniorProject.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A00F959200168450035D550 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		2A00F95B20020F630035D550 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		2A1265902020CE4F008E0CFB /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
+		2A12659220211313008E0CFB /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		2A126594202115BC008E0CFB /* AddEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvent.swift; sourceTree = "<group>"; };
 		2A2461751FF2E6F700EC3B60 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2A2E64C72015BB810078F9D8 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		2A2E64CA2015C3C20078F9D8 /* ProfileContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContainerViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +94,7 @@
 		2AD87CF220139C8E00B660AA /* DataHealtyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHealtyViewController.swift; sourceTree = "<group>"; };
 		2AD87CF42013A66300B660AA /* FeedHealtyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHealtyTableViewCell.swift; sourceTree = "<group>"; };
 		2AD87CF62013A79500B660AA /* FeedHealtyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHealtyTableViewController.swift; sourceTree = "<group>"; };
+		2AE2C12C2019B7C2009839BF /* HealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
 		31B48185AA3E7379745FDF75 /* Pods_seniorProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_seniorProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B310042E470648505F824644 /* Pods-seniorProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seniorProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-seniorProject/Pods-seniorProject.debug.xcconfig"; sourceTree = "<group>"; };
 		DFF23EE19135B8A787A71224 /* Pods-seniorProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seniorProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-seniorProject/Pods-seniorProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +206,7 @@
 				2A2E64CA2015C3C20078F9D8 /* ProfileContainerViewController.swift */,
 				2A2E64CC2016102E0078F9D8 /* ShowProfileViewController.swift */,
 				2A2E64CE2016103F0078F9D8 /* EditProfileViewController.swift */,
+				2A12659220211313008E0CFB /* AddEventViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,6 +216,9 @@
 			children = (
 				2A2E64C72015BB810078F9D8 /* ProfileData.swift */,
 				2A2E64DC2017B13D0078F9D8 /* EventData.swift */,
+				2AE2C12C2019B7C2009839BF /* HealthData.swift */,
+				2A1265902020CE4F008E0CFB /* RegisterData.swift */,
+				2A126594202115BC008E0CFB /* AddEvent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -394,11 +406,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AD87CF72013A79500B660AA /* FeedHealtyTableViewController.swift in Sources */,
+				2A12659320211313008E0CFB /* AddEventViewController.swift in Sources */,
 				2AA85C0A1FE6D85800184C90 /* LoginViewController.swift in Sources */,
 				2A44C61F20026FDE006C287D /* DetailEventViewController.swift in Sources */,
 				2A2E64CD2016102E0078F9D8 /* ShowProfileViewController.swift in Sources */,
 				2A2E64DD2017B13D0078F9D8 /* EventData.swift in Sources */,
 				2AD87CF1201399AE00B660AA /* ContainerViewController.swift in Sources */,
+				2AE2C12D2019B7C2009839BF /* HealthData.swift in Sources */,
+				2A126595202115BC008E0CFB /* AddEvent.swift in Sources */,
 				2A47891C1FCB3910006FB79E /* seniorProject.xcdatamodeld in Sources */,
 				2A00F95C20020F630035D550 /* EventsTableViewCell.swift in Sources */,
 				2AD87CEF2013991B00B660AA /* EmptySegue.swift in Sources */,
@@ -412,6 +427,7 @@
 				2A4789141FCB3910006FB79E /* AppDelegate.swift in Sources */,
 				2A600D271FFED3C10097EC7B /* ProfileViewController.swift in Sources */,
 				2A2E64CB2015C3C20078F9D8 /* ProfileContainerViewController.swift in Sources */,
+				2A1265912020CE4F008E0CFB /* RegisterData.swift in Sources */,
 				2AA85C0E1FE6E40800184C90 /* Const.swift in Sources */,
 				2A7C0D7D20131F18005A38A1 /* HealtyViewController.swift in Sources */,
 				2A2E64CF2016103F0078F9D8 /* EditProfileViewController.swift in Sources */,

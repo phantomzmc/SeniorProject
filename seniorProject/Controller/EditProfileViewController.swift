@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class EditProfileViewController: UIViewController {
+    
+    var dataReference : DatabaseReference?
 
     @IBOutlet weak var fullnameTextField: UITextField!
     @IBOutlet weak var genTextField: UITextField!
@@ -17,11 +20,16 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var pillTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.fullnameTextField.delegate = self as? UITextFieldDelegate
+
 
         // Do any additional setup after loading the view.
     }
 
     @IBAction func submitEditProfileCilck(_ sender: Any) {
+        dataReference = Database.database().reference()
+        dataReference?.childByAutoId().child("Profile").child("name").setValue(fullnameTextField)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
