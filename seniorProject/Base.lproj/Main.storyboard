@@ -427,8 +427,14 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user (1)" translatesAutoresizingMaskIntoConstraints="NO" id="eqx-je-UdH">
                                                 <rect key="frame" x="156" y="53" width="103" height="82"/>
                                             </imageView>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guw-IV-zEc">
+                                                <rect key="frame" x="0.0" y="231" width="414" height="389"/>
+                                                <connections>
+                                                    <segue destination="AQO-f7-h0W" kind="embed" identifier="profilecontainer" id="F8N-l9-zVl"/>
+                                                </connections>
+                                            </containerView>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X2q-Ts-GG7">
-                                                <rect key="frame" x="28" y="224" width="358" height="28"/>
+                                                <rect key="frame" x="28" y="196" width="358" height="28"/>
                                                 <segments>
                                                     <segment title="ข้อมูลโปรไฟล์"/>
                                                     <segment title="เเก้ไขโปรไฟล์"/>
@@ -437,18 +443,12 @@
                                                     <action selector="profileSegmentCortroller:" destination="SrZ-pF-Ch2" eventType="valueChanged" id="rlB-2Y-tRf"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guw-IV-zEc">
-                                                <rect key="frame" x="8" y="270" width="398" height="350"/>
-                                                <connections>
-                                                    <segue destination="AQO-f7-h0W" kind="embed" identifier="profilecontainer" id="F8N-l9-zVl"/>
-                                                </connections>
-                                            </containerView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="X2q-Ts-GG7" firstAttribute="leading" secondItem="T1D-NA-bPq" secondAttribute="leading" constant="28" id="3al-Ju-o6O"/>
-                                            <constraint firstItem="guw-IV-zEc" firstAttribute="leading" secondItem="T1D-NA-bPq" secondAttribute="leading" constant="8" id="50U-u5-28p"/>
-                                            <constraint firstAttribute="bottom" secondItem="X2q-Ts-GG7" secondAttribute="bottom" constant="749" id="8aP-PD-xwu"/>
+                                            <constraint firstItem="guw-IV-zEc" firstAttribute="leading" secondItem="T1D-NA-bPq" secondAttribute="leading" id="50U-u5-28p"/>
+                                            <constraint firstAttribute="bottom" secondItem="X2q-Ts-GG7" secondAttribute="bottom" constant="777" id="8aP-PD-xwu"/>
                                             <constraint firstItem="r51-p4-C2J" firstAttribute="top" secondItem="T1D-NA-bPq" secondAttribute="top" id="E9B-Eg-khV"/>
                                             <constraint firstAttribute="trailing" secondItem="X2q-Ts-GG7" secondAttribute="trailing" constant="28" id="OgT-ch-4Cb"/>
                                             <constraint firstAttribute="bottom" secondItem="eqx-je-UdH" secondAttribute="bottom" constant="865" id="OpQ-jG-fcE"/>
@@ -456,10 +456,10 @@
                                             <constraint firstItem="eqx-je-UdH" firstAttribute="top" secondItem="T1D-NA-bPq" secondAttribute="top" constant="53" id="TZw-ta-Pwu"/>
                                             <constraint firstAttribute="trailing" secondItem="eqx-je-UdH" secondAttribute="trailing" constant="155" id="Wln-FQ-MYh"/>
                                             <constraint firstAttribute="bottom" secondItem="guw-IV-zEc" secondAttribute="bottom" constant="380" id="aE1-8x-2WU"/>
-                                            <constraint firstItem="X2q-Ts-GG7" firstAttribute="top" secondItem="eqx-je-UdH" secondAttribute="bottom" constant="89" id="eI8-1i-yI6"/>
-                                            <constraint firstAttribute="trailing" secondItem="guw-IV-zEc" secondAttribute="trailing" constant="8" id="gg6-KN-cNT"/>
+                                            <constraint firstItem="X2q-Ts-GG7" firstAttribute="top" secondItem="eqx-je-UdH" secondAttribute="bottom" constant="61" id="eI8-1i-yI6"/>
+                                            <constraint firstAttribute="trailing" secondItem="guw-IV-zEc" secondAttribute="trailing" id="gg6-KN-cNT"/>
                                             <constraint firstAttribute="bottom" secondItem="r51-p4-C2J" secondAttribute="bottom" constant="812" id="k4U-Hu-WMj"/>
-                                            <constraint firstItem="guw-IV-zEc" firstAttribute="top" secondItem="X2q-Ts-GG7" secondAttribute="bottom" constant="19" id="kIE-7x-neg"/>
+                                            <constraint firstItem="guw-IV-zEc" firstAttribute="top" secondItem="X2q-Ts-GG7" secondAttribute="bottom" constant="8" id="kIE-7x-neg"/>
                                             <constraint firstItem="r51-p4-C2J" firstAttribute="leading" secondItem="T1D-NA-bPq" secondAttribute="leading" id="maZ-I5-5mC"/>
                                             <constraint firstAttribute="height" constant="1000" id="pVz-Y1-cLh"/>
                                             <constraint firstAttribute="trailing" secondItem="r51-p4-C2J" secondAttribute="trailing" id="uA1-FM-HUf"/>
@@ -603,7 +603,7 @@
             </objects>
             <point key="canvasLocation" x="3024.6376811594205" y="-1604.3478260869567"/>
         </scene>
-        <!--Add Event View Controller-->
+        <!--เพิ่มตารางนัดหมาย-->
         <scene sceneID="q1Y-Cu-akl">
             <objects>
                 <viewController id="SBk-bf-GWt" customClass="AddEventViewController" customModule="seniorProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -692,6 +692,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CIc-Jx-pAo"/>
                     </view>
+                    <navigationItem key="navigationItem" title="เพิ่มตารางนัดหมาย" id="y8t-r0-K3X"/>
                     <connections>
                         <outlet property="dateEvent" destination="8YJ-Pg-JzJ" id="jNX-YN-TWF"/>
                         <outlet property="detailEvent" destination="WTB-Nn-M89" id="zCq-ST-3fB"/>
@@ -870,6 +871,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="fh4-08-gna"/>
                     <navigationItem key="navigationItem" title="สุขภาพ" id="IWU-w6-ybO">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="o2j-PY-UpZ">
+                            <connections>
+                                <action selector="addDataHealty:" destination="2hL-eD-Kmd" id="S8n-CR-hK4"/>
+                                <segue destination="W7v-u8-fUR" kind="push" id="1WK-Wq-IAk"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="ออกจากระบบ" id="eYS-WH-Akw">
                             <connections>
                                 <action selector="logoutButton:" destination="P5F-va-gqn" id="TGa-7w-mwX"/>
@@ -882,8 +889,124 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eiv-Ry-pKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2hL-eD-Kmd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3024.6376811594205" y="-704.34782608695662"/>
+        </scene>
+        <!--เพิ่มข้อมูลสุขภาพ-->
+        <scene sceneID="BJP-2o-qj9">
+            <objects>
+                <viewController id="W7v-u8-fUR" customClass="AddDataHealtyViewController" customModule="seniorProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iL8-Op-we9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="เช่น 55 กิโลกรัม" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GbH-sS-em5">
+                                <rect key="frame" x="20" y="135" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="เช่น 170 เซนติเมตร" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wx4-Oz-5zr">
+                                <rect key="frame" x="20" y="213" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="เช่น ยาเเก้ปวด" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SIp-s1-tCE">
+                                <rect key="frame" x="20" y="288" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="เช่น โรงพยาบาลราม" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lze-2T-X8D">
+                                <rect key="frame" x="20" y="361" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="น้ำหนัก :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrR-U6-a2t">
+                                <rect key="frame" x="20" y="106" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ส่วนสูง :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApJ-0t-i5m">
+                                <rect key="frame" x="20" y="184" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โรงพยาบาลประจำ :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmw-0o-3jJ">
+                                <rect key="frame" x="20" y="332" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="595-Ob-P3c">
+                                <rect key="frame" x="20" y="475" width="374" height="43"/>
+                                <color key="backgroundColor" red="0.56471882893122327" green="1" blue="0.68962760392332978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Smr-up-4zJ"/>
+                                </constraints>
+                                <state key="normal" title="เพิ่ม">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDataHealtyWithSender:" destination="W7v-u8-fUR" eventType="touchUpInside" id="8Kh-Y5-9zW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ยาประจำ :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Toi-gR-pU3">
+                                <rect key="frame" x="20" y="259" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ApJ-0t-i5m" firstAttribute="top" secondItem="GbH-sS-em5" secondAttribute="bottom" constant="19" id="2DT-q1-Ozi"/>
+                            <constraint firstItem="Wx4-Oz-5zr" firstAttribute="top" secondItem="ApJ-0t-i5m" secondAttribute="bottom" constant="8" id="6NC-UW-4fh"/>
+                            <constraint firstItem="MrR-U6-a2t" firstAttribute="leading" secondItem="rzg-tw-EWO" secondAttribute="leading" constant="20" id="6oD-Rd-ctz"/>
+                            <constraint firstItem="rzg-tw-EWO" firstAttribute="trailing" secondItem="Toi-gR-pU3" secondAttribute="trailing" constant="20" id="8Zw-u7-uGJ"/>
+                            <constraint firstItem="GbH-sS-em5" firstAttribute="leading" secondItem="rzg-tw-EWO" secondAttribute="leading" constant="20" id="AGU-ui-q5F"/>
+                            <constraint firstItem="Fmw-0o-3jJ" firstAttribute="top" secondItem="SIp-s1-tCE" secondAttribute="bottom" constant="14" id="BCM-9W-3AG"/>
+                            <constraint firstItem="rzg-tw-EWO" firstAttribute="trailing" secondItem="ApJ-0t-i5m" secondAttribute="trailing" constant="20" id="BKQ-60-XRO"/>
+                            <constraint firstItem="595-Ob-P3c" firstAttribute="top" secondItem="Lze-2T-X8D" secondAttribute="bottom" constant="84" id="BmX-UU-swg"/>
+                            <constraint firstItem="MrR-U6-a2t" firstAttribute="top" secondItem="rzg-tw-EWO" secondAttribute="top" constant="42" id="FPk-Vh-GGd"/>
+                            <constraint firstItem="rzg-tw-EWO" firstAttribute="trailing" secondItem="Lze-2T-X8D" secondAttribute="trailing" constant="20" id="GhP-Tr-WWx"/>
+                            <constraint firstItem="ApJ-0t-i5m" firstAttribute="leading" secondItem="rzg-tw-EWO" secondAttribute="leading" constant="20" id="HNd-GT-bpw"/>
+                            <constraint firstItem="Fmw-0o-3jJ" firstAttribute="leading" secondItem="rzg-tw-EWO" secondAttribute="leading" constant="20" id="MTT-Eh-QWb"/>
+                            <constraint firstItem="rzg-tw-EWO" firstAttribute="trailing" secondItem="595-Ob-P3c" secondAttribute="trailing" constant="20" id="RGD-e9-md2"/>
+                            <constraint firstItem="rzg-tw-EWO" firstAttribute="trailing" secondItem="Fmw-0o-3jJ" secondAttribute="trailing" constant="20" id="RTm-5g-beO"/>
+                            <constraint firstItem="GbH-sS-em5" firstAttribute="top" secondItem="MrR-U6-a2t" secondAttribute="bottom" constant="8" id="SyB-ZA-pf9"/>
+                            <constraint firstItem="Lze-2T-X8D" firstAttribute="top" secondItem="Fmw-0o-3jJ" secondAttribute="bottom" constant="8" id="cvq-24-rGk"/>
+                            <constraint firstItem="rzg-tw-EWO" firstAttribute="trailing" secondItem="GbH-sS-em5" secondAttribute="trailing" constant="20" id="eGb-se-AP7"/>
+                            <constraint firstItem="rzg-tw-EWO" firstAttribute="trailing" secondItem="Wx4-Oz-5zr" secondAttribute="trailing" constant="20" id="fRd-s6-n7v"/>
+                            <constraint firstItem="rzg-tw-EWO" firstAttribute="bottom" secondItem="595-Ob-P3c" secondAttribute="bottom" constant="169" id="gYc-J6-xHP"/>
+                            <constraint firstItem="Lze-2T-X8D" firstAttribute="leading" secondItem="rzg-tw-EWO" secondAttribute="leading" constant="20" id="gZC-dg-Doc"/>
+                            <constraint firstItem="Toi-gR-pU3" firstAttribute="leading" secondItem="rzg-tw-EWO" secondAttribute="leading" constant="20" id="guP-Hn-n1n"/>
+                            <constraint firstItem="rzg-tw-EWO" firstAttribute="trailing" secondItem="SIp-s1-tCE" secondAttribute="trailing" constant="20" id="kVT-HY-clr"/>
+                            <constraint firstItem="595-Ob-P3c" firstAttribute="leading" secondItem="rzg-tw-EWO" secondAttribute="leading" constant="20" id="lk3-dM-L9N"/>
+                            <constraint firstItem="Toi-gR-pU3" firstAttribute="top" secondItem="Wx4-Oz-5zr" secondAttribute="bottom" constant="16" id="mJG-D5-Jrn"/>
+                            <constraint firstItem="SIp-s1-tCE" firstAttribute="top" secondItem="Toi-gR-pU3" secondAttribute="bottom" constant="8" id="ozj-7f-x02"/>
+                            <constraint firstItem="rzg-tw-EWO" firstAttribute="trailing" secondItem="MrR-U6-a2t" secondAttribute="trailing" constant="20" id="qeD-Q4-jl4"/>
+                            <constraint firstItem="Wx4-Oz-5zr" firstAttribute="leading" secondItem="rzg-tw-EWO" secondAttribute="leading" constant="20" id="vrv-Pm-a1Q"/>
+                            <constraint firstItem="SIp-s1-tCE" firstAttribute="leading" secondItem="rzg-tw-EWO" secondAttribute="leading" constant="20" id="yYs-pB-oGy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rzg-tw-EWO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="เพิ่มข้อมูลสุขภาพ" id="6AL-RV-0Uw"/>
+                    <connections>
+                        <outlet property="heigthTextFlied" destination="Wx4-Oz-5zr" id="Dd2-YK-1U8"/>
+                        <outlet property="hospitalTextFlied" destination="Lze-2T-X8D" id="xhm-0D-kck"/>
+                        <outlet property="pillSafeTextFlied" destination="SIp-s1-tCE" id="pNK-XQ-qWY"/>
+                        <outlet property="weightTextFlied" destination="GbH-sS-em5" id="56W-gD-pAw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q2g-4U-etx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5644.9275362318849" y="-1727.4456521739132"/>
         </scene>
         <!--Data Healty View Controller-->
         <scene sceneID="H2K-H6-uvj">
@@ -1073,10 +1196,14 @@
                     </view>
                     <size key="freeformSize" width="375" height="477"/>
                     <connections>
+                        <outlet property="heigthLabel" destination="Gii-xX-fVC" id="uI8-c7-Nru"/>
+                        <outlet property="hospitalLabel" destination="o1l-GU-WZh" id="r3J-AE-neM"/>
+                        <outlet property="pillSafeLabel" destination="DWv-HM-ZF2" id="JlD-9g-pEK"/>
                         <outlet property="viewCA" destination="aDa-8G-e4b" id="wm4-78-fUo"/>
                         <outlet property="viewHeigh" destination="DHh-8e-kOh" id="Ggb-ry-O9l"/>
                         <outlet property="viewPill" destination="wTp-MP-EfY" id="Sux-hH-Qqy"/>
                         <outlet property="viewWeigth" destination="jUa-QU-0zn" id="nbj-ei-u87"/>
+                        <outlet property="weigthLabel" destination="ZLl-BD-Lwg" id="u56-mM-rHv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXr-ra-WRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1403,7 +1530,7 @@
             <objects>
                 <viewController id="AQO-f7-h0W" customClass="ProfileContainerViewController" customModule="seniorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xK9-v4-UIn">
-                        <rect key="frame" x="0.0" y="0.0" width="398" height="350"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="389"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="dV4-E0-7aO"/>

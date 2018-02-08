@@ -7,14 +7,15 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
 class ShowProfileViewController: UIViewController {
     
 
     var dataProfile = [RegisterData]()
-    var ref = Database.database().reference(withPath : "Member").child("jintana singjit")
-
+    let ref = Database.database().reference()
+    
     @IBOutlet weak var fullnameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var genLabel: UILabel!
@@ -34,12 +35,37 @@ class ShowProfileViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
 //        let event = eventsdata[indexPath.row]
 //        if let eventname = event.eventName {
 //            cell?.eventNameLabel.text = eventname
+
+        
+        let displayname = Auth.auth().currentUser?.displayName
+        ref.child("Member").child(displayname!).child("Profile").observeSingleEvent(of:
+            .value, with: { (snapshot) in
+                
+                let value = snapshot.value as? NSDictionary
+                let fullname = value?["username"] as? String ?? ""
+                let age = value?["age"] as? String ?? ""
+                let gen = value?["tel"] as? String ?? ""
+                let da = value?["DA"] as? String ?? ""
+                let pill = value?["pill"] as? String ?? ""
+
+                print("fullname:" + (fullname))
+                print("age:" + (age))
+                print("gen:" + (gen))
+                print("DA:" + (da))
+                print("pill:" + (pill))
+                
+                self.fullnameLabel.text = fullname
+                self.ageLabel.text = age
+                self.genLabel.text = gen
+                self.daLabel.text = da
+                self.pillLabel.text = pill
+                
+        })
+        
         
 
         // Do any additional setup after loading the view.

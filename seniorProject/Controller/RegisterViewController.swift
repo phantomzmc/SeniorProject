@@ -74,6 +74,21 @@ class RegisterViewController: UIViewController {
                     Const().ShowAlert(title: "เกิดข้อผิดพลาด", messeage: error.localizedDescription, viewController: self)
                     return
                 }else {
+                    let user = Auth.auth().currentUser
+                    if let user = user {
+                        let changeRequest = user.createProfileChangeRequest()
+                        
+                        changeRequest.displayName = username
+//                        changeRequest.photoURL =
+//                            NSURL(string: "https://example.com/jane-q-user/profile.jpg")
+                        changeRequest.commitChanges { error in
+                            if let error = error {
+                                print("displayname error")
+                            } else {
+                                print("ok displayname"  + (username)!)
+                            }
+                        }
+                    }
                     self.ref = Database.database().reference(withPath:"Member")
                     let registerData = RegisterData (email: email!, username: username!, age: age!, DA: DA!, pill: pill!, tel: tel!, sosUser: sosUser!, sosTel: sosTel!)
                     let registerRef = self.ref.child(username!).child("Profile")

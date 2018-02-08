@@ -8,10 +8,14 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class AddEventViewController: UIViewController {
-    
+
+
     var ref = DatabaseReference()
+    var authListener: AuthStateDidChangeListenerHandle?
+    var userName : String!
     
     @IBOutlet weak var nameEvent : UITextField!
     @IBOutlet weak var detailEvent : UITextField!
@@ -20,15 +24,32 @@ class AddEventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Auth.auth().addStateDidChangeListener() { auth, user in
+//            let firAuthEmail = Auth.auth().currentUser
+//            if firAuthEmail != nil {
+//                userName = firAuthEmail
+//                print(self.userName)
+            let currentUser = Auth.auth().currentUser
+            print(currentUser?.displayName)
+            
+            }
+        }
+
 
         // Do any additional setup after loading the view.
-    }
+    
+    
+    
+
+
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     @IBAction func submitAddEvent (sender : Any){
+        let displayname = Auth.auth().currentUser?.displayName
         let nameEvent = self.nameEvent.text
         let detailEvent = self.detailEvent.text
         let dateEvent = self.dateEvent.text
@@ -36,7 +57,7 @@ class AddEventViewController: UIViewController {
         
         self.ref = Database.database().reference(withPath:"Member")
         let addEventData = AddEvent (nameEvent: nameEvent!, detailEvent: detailEvent!, dateEvent: dateEvent!, monthEvent: monthEvent!)
-        let addEventRef = self.ref.child("jintana singjit").child("Event").child(nameEvent!)
+        let addEventRef = self.ref.child(displayname!).child("Event").child(nameEvent!)
         addEventRef.setValue(addEventData.toAnyObject())
         let alert = UIAlertController(title: "สำเร็จ", message: "เพิ่มรายการสำเร็จ", preferredStyle: .alert)
         let resultAlert = UIAlertAction(title: "OK", style: .default , handler: { (alertAction) in

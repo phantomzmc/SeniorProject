@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
             
         
             }else {
-                let alert = UIAlertController(title: "ยินดีต้อนรับ", message: "Email : ", preferredStyle: .alert)
+                let alert = UIAlertController(title: "ยินดีต้อนรับ", message: "Email : " + (email)!, preferredStyle: .alert)
                 let resultAlert = UIAlertAction(title: "OK", style: .default, handler: { (alertAction) in
                     
                 })

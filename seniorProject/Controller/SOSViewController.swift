@@ -7,9 +7,14 @@
 //
 
 import UIKit
+//import FirebaseDatabase
+import FirebaseAuth
 
 
 class SOSViewController: UIViewController {
+    
+//    let ref = Database.database().reference()
+    
 
     @IBOutlet weak var SOSbuntton: UIButton!
     @IBOutlet weak var Telbutton: UIButton!
@@ -21,7 +26,6 @@ class SOSViewController: UIViewController {
         
         Telbutton.layer.cornerRadius = 100
         
-
         // Do any additional setup after loading the view.
     }
 
@@ -41,6 +45,7 @@ class SOSViewController: UIViewController {
         
     }
     @IBAction func Telbutton (sender : Any) {
+        
         let phoneNumber = 0903198808
         if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
             
@@ -49,6 +54,22 @@ class SOSViewController: UIViewController {
                 application.open(phoneCallURL, options: [:], completionHandler: nil)
             }
         }
+//        let displayname = Auth.auth().currentUser?.displayName
+//        ref.child("Member").child(displayname!).child("Profile").child("sosTel").observeSingleEvent(of:
+//            .value, with: { (snapshot) in
+//
+//                let value = snapshot.value as? NSDictionary
+//                let SOStel = value?["sosTel"] as? String ?? ""
+//
+//                let phoneNumber = SOStel
+//                if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+//
+//                    let application:UIApplication = UIApplication.shared
+//                    if (application.canOpenURL(phoneCallURL)) {
+//                        application.open(phoneCallURL, options: [:], completionHandler: nil)
+//                    }
+//                }
+//        })
         
     }
 
