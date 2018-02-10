@@ -36,6 +36,10 @@
 		2A47891E1FCB3910006FB79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A47891D1FCB3910006FB79E /* Assets.xcassets */; };
 		2A4789211FCB3910006FB79E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A47891F1FCB3910006FB79E /* LaunchScreen.storyboard */; };
 		2A600D271FFED3C10097EC7B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A600D261FFED3C10097EC7B /* ProfileViewController.swift */; };
+		2A770EB5202E22F4001F1708 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A770EB4202E22F1001F1708 /* icon.png */; };
+		2A770EB7202E22FF001F1708 /* multiple-users-silhouette.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A770EB6202E22FD001F1708 /* multiple-users-silhouette.png */; };
+		2A770EB9202E2308001F1708 /* phone-receiver.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A770EB8202E2306001F1708 /* phone-receiver.png */; };
+		2A770EBB202E2314001F1708 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A770EBA202E2312001F1708 /* home.png */; };
 		2A7C0D7D20131F18005A38A1 /* HealtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7C0D7C20131F18005A38A1 /* HealtyViewController.swift */; };
 		2AA85C071FE622A700184C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA85C061FE622A700184C90 /* GoogleService-Info.plist */; };
 		2AA85C0A1FE6D85800184C90 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA85C091FE6D85800184C90 /* LoginViewController.swift */; };
@@ -82,6 +86,10 @@
 		2A4789201FCB3910006FB79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A4789221FCB3911006FB79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A600D261FFED3C10097EC7B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2A770EB4202E22F1001F1708 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		2A770EB6202E22FD001F1708 /* multiple-users-silhouette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple-users-silhouette.png"; sourceTree = "<group>"; };
+		2A770EB8202E2306001F1708 /* phone-receiver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-receiver.png"; sourceTree = "<group>"; };
+		2A770EBA202E2312001F1708 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		2A7C0D7C20131F18005A38A1 /* HealtyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealtyViewController.swift; sourceTree = "<group>"; };
 		2AA85C061FE622A700184C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AA85C091FE6D85800184C90 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +138,10 @@
 			children = (
 				2A2E64D32016E0210078F9D8 /* height.png */,
 				2A2E64D42016E0210078F9D8 /* medical-kit.png */,
+				2A770EB8202E2306001F1708 /* phone-receiver.png */,
+				2A770EB6202E22FD001F1708 /* multiple-users-silhouette.png */,
+				2A770EBA202E2312001F1708 /* home.png */,
+				2A770EB4202E22F1001F1708 /* icon.png */,
 				2A2E64D52016E0210078F9D8 /* pills.png */,
 				2A2E64D62016E0210078F9D8 /* weight.png */,
 			);
@@ -323,13 +335,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A770EB5202E22F4001F1708 /* icon.png in Resources */,
 				2A2E64E62017BA930078F9D8 /* 4.jpg in Resources */,
 				2A2E64E42017BA8C0078F9D8 /* 3.jpg in Resources */,
+				2A770EB9202E2308001F1708 /* phone-receiver.png in Resources */,
+				2A770EBB202E2314001F1708 /* home.png in Resources */,
 				2A4789211FCB3910006FB79E /* LaunchScreen.storyboard in Resources */,
 				2AA85C071FE622A700184C90 /* GoogleService-Info.plist in Resources */,
 				2A2E64E22017BA850078F9D8 /* 2.jpg in Resources */,
 				2A2E64D72016E0230078F9D8 /* height.png in Resources */,
 				2A47891E1FCB3910006FB79E /* Assets.xcassets in Resources */,
+				2A770EB7202E22FF001F1708 /* multiple-users-silhouette.png in Resources */,
 				2A2E64D92016E0230078F9D8 /* pills.png in Resources */,
 				2A2E64DA2016E0230078F9D8 /* weight.png in Resources */,
 				2A2E64E02017BA790078F9D8 /* 1.jpg in Resources */,

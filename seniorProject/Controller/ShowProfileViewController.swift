@@ -16,11 +16,16 @@ class ShowProfileViewController: UIViewController {
     var dataProfile = [RegisterData]()
     let ref = Database.database().reference()
     
+    @IBOutlet var avatarImage : UIImageView!
     @IBOutlet weak var fullnameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var genLabel: UILabel!
     @IBOutlet weak var daLabel: UILabel!
     @IBOutlet weak var pillLabel: UILabel!
+    @IBOutlet weak var homeLabel : UILabel!
+    @IBOutlet weak var sosUserLabel : UILabel!
+    @IBOutlet weak var sosTelLabel : UILabel!
+
     
     func fetchData (){
         ref.observeSingleEvent(of: .value) { (snapshot) in
@@ -51,18 +56,27 @@ class ShowProfileViewController: UIViewController {
                 let gen = value?["tel"] as? String ?? ""
                 let da = value?["DA"] as? String ?? ""
                 let pill = value?["pill"] as? String ?? ""
+                let home = value?["home"] as? String ?? ""
+                let sosuser = value?["sosUser"] as? String ?? ""
+                let sostel = value?["sosTel"] as? String ?? ""
 
                 print("fullname:" + (fullname))
                 print("age:" + (age))
                 print("gen:" + (gen))
                 print("DA:" + (da))
                 print("pill:" + (pill))
+                print("home:" + (home))
+                print("sosuser:" + (sosuser))
+                print("sostel:" + (sostel))
                 
                 self.fullnameLabel.text = fullname
                 self.ageLabel.text = age
                 self.genLabel.text = gen
                 self.daLabel.text = da
                 self.pillLabel.text = pill
+                self.homeLabel.text = home
+                self.sosUserLabel.text = sosuser
+                self.sosTelLabel.text = sostel
                 
         })
         

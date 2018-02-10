@@ -19,6 +19,9 @@ class EditProfileViewController: UIViewController {
     var age : String = ""
     var da : String = ""
     var pill : String = ""
+    var home : String = ""
+    var sosuser : String = ""
+    var sostel : String = ""
     
 
     @IBOutlet weak var fullnameTextField: UITextField!
@@ -26,6 +29,9 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var daTextField: UITextField!
     @IBOutlet weak var pillTextField: UITextField!
+    @IBOutlet weak var homeTextField : UITextField!
+    @IBOutlet weak var sosUserTextField : UITextField!
+    @IBOutlet weak var sosTelTextField : UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +50,9 @@ class EditProfileViewController: UIViewController {
         age = ageTextField.text!
         da = daTextField.text!
         pill = pillTextField.text!
+        home = homeTextField.text!
+        sosuser = sosUserTextField.text!
+        sostel = sosTelTextField.text!
         
         dataReference = Database.database().reference()
         dataReference?.child("Member").child(displayname!).child("Profile").child("name").setValue(fullname)
@@ -51,6 +60,9 @@ class EditProfileViewController: UIViewController {
         dataReference?.child("Member").child(displayname!).child("Profile").child("age").setValue(age)
         dataReference?.child("Member").child(displayname!).child("Profile").child("DA").setValue(da)
         dataReference?.child("Member").child(displayname!).child("Profile").child("pill").setValue(pill)
+        dataReference?.child("Member").child(displayname!).child("Profile").child("homel").setValue(home)
+        dataReference?.child("Member").child(displayname!).child("Profile").child("sosUser").setValue(sosuser)
+        dataReference?.child("Member").child(displayname!).child("Profile").child("sosTel").setValue(sostel)
 
 
 
@@ -60,6 +72,9 @@ class EditProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 

@@ -11,12 +11,12 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     var profilecontainer : ProfileContainerViewController!
-    @IBOutlet var avatarImage : UIImageView!
+//    @IBOutlet var avatarImage : UIImageView!
     @IBOutlet weak var profileSegmentControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        avatarImage.layer.cornerRadius =  50
+//        avatarImage.layer.cornerRadius =  50
 
         // Do any additional setup after loading the view.
     }
@@ -25,8 +25,7 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func profileSegmentCortroller(_ sender: Any) {
+    @IBAction func controlProfile(_ sender: Any) {
         if(profileSegmentControl?.selectedSegmentIndex == 0)
         {
             profilecontainer.segueIdentifierReceivedFromParent("showprofile")
@@ -36,13 +35,14 @@ class ProfileViewController: UIViewController {
             profilecontainer.segueIdentifierReceivedFromParent("editprofile")
         }
     }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "profilecontainer"{
             self.profilecontainer =  segue.destination as! ProfileContainerViewController
         }
-        
+
     }
-    
+//
     /*
     // MARK: - Navigation
 
