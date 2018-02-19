@@ -1449,43 +1449,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGa-E5-Fcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5698.5507246376819" y="-452.44565217391306"/>
-        </scene>
-        <!--การกินยา-->
-        <scene sceneID="luc-lF-UZp">
-            <objects>
-                <viewController id="yXk-hb-faM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NBf-za-6Er">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEo-ed-frd">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
-                                <connections>
-                                    <segue destination="qJC-UU-wXa" kind="embed" id="JD9-Wn-xzL"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rEo-ed-frd" firstAttribute="top" secondItem="DTy-Ws-3jc" secondAttribute="top" id="1tU-5T-o9h"/>
-                            <constraint firstItem="DTy-Ws-3jc" firstAttribute="bottom" secondItem="rEo-ed-frd" secondAttribute="bottom" id="KxH-Xy-mdC"/>
-                            <constraint firstItem="DTy-Ws-3jc" firstAttribute="trailing" secondItem="rEo-ed-frd" secondAttribute="trailing" id="XFm-mm-l86"/>
-                            <constraint firstItem="rEo-ed-frd" firstAttribute="leading" secondItem="DTy-Ws-3jc" secondAttribute="leading" id="j27-YE-frm"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="DTy-Ws-3jc"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="การกินยา" id="R84-Zt-8dg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KHl-Yp-0uy">
-                            <connections>
-                                <segue destination="W8f-2x-8EN" kind="show" id="Wab-Nr-N76"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hTO-xY-cZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3025" y="33"/>
+            <point key="canvasLocation" x="6517" y="-864"/>
         </scene>
         <!--โทรฉุกเฉิน-->
         <scene sceneID="09b-Xb-Lk7">
@@ -1644,7 +1608,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="yXk-hb-faM" kind="relationship" relationship="rootViewController" id="Jhi-NR-4c9"/>
+                        <segue destination="oxY-IF-oQy" kind="relationship" relationship="rootViewController" id="13m-b7-PbZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fx-nd-IdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2080,21 +2044,95 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BB1-eE-Jhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6856.521739130435" y="79.891304347826093"/>
+            <point key="canvasLocation" x="4046" y="33"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Osz-GT-oDP">
+        <!--การกินยา-->
+        <scene sceneID="w83-wm-SNa">
             <objects>
-                <viewController id="qJC-UU-wXa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oVb-R4-dt6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="oxY-IF-oQy" customClass="PillShowViewController" customModule="seniorProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dhV-4X-1Ql">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JV8-JU-ybH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPill" rowHeight="92" id="r2U-7R-34g" customClass="PillTableViewCell" customModule="seniorProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r2U-7R-34g" id="Sse-ff-Vwt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ชื่อยา" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKc-Zo-NMu">
+                                                    <rect key="frame" x="15" y="23" width="192" height="45"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ก่อน &amp; หลัง" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGH-dV-cPJ">
+                                                    <rect key="frame" x="215" y="18" width="172" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ช่วงเวลา" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="st8-xB-d7a">
+                                                    <rect key="frame" x="215" y="53" width="172" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="st8-xB-d7a" firstAttribute="leading" secondItem="RKc-Zo-NMu" secondAttribute="trailing" constant="8" id="7DC-ZZ-v91"/>
+                                                <constraint firstItem="RKc-Zo-NMu" firstAttribute="top" secondItem="Sse-ff-Vwt" secondAttribute="topMargin" constant="12" id="Kfs-gl-WeU"/>
+                                                <constraint firstItem="RKc-Zo-NMu" firstAttribute="leading" secondItem="Sse-ff-Vwt" secondAttribute="leadingMargin" id="MbH-tl-pay"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="RKc-Zo-NMu" secondAttribute="bottom" constant="13" id="NrA-Vd-IMa"/>
+                                                <constraint firstItem="UGH-dV-cPJ" firstAttribute="leading" secondItem="RKc-Zo-NMu" secondAttribute="trailing" constant="8" id="VYo-14-hhq"/>
+                                                <constraint firstItem="UGH-dV-cPJ" firstAttribute="top" secondItem="Sse-ff-Vwt" secondAttribute="topMargin" constant="7" id="Y0I-4I-KRq"/>
+                                                <constraint firstItem="st8-xB-d7a" firstAttribute="top" secondItem="UGH-dV-cPJ" secondAttribute="bottom" constant="14" id="d0c-g2-odT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="st8-xB-d7a" secondAttribute="bottom" constant="7" id="fAQ-59-3AG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="st8-xB-d7a" secondAttribute="trailing" constant="12" id="sgy-hf-uXO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="UGH-dV-cPJ" secondAttribute="trailing" constant="12" id="x6z-Au-bAY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eakPill" destination="UGH-dV-cPJ" id="nEH-rq-EJY"/>
+                                            <outlet property="namePill" destination="RKc-Zo-NMu" id="Wjc-OT-y7k"/>
+                                            <outlet property="timePill" destination="st8-xB-d7a" id="zhm-WX-sXL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="oxY-IF-oQy" id="aO7-ta-NAe"/>
+                                    <outlet property="delegate" destination="oxY-IF-oQy" id="JGW-rh-Qy1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JV8-JU-ybH" firstAttribute="top" secondItem="dhV-4X-1Ql" secondAttribute="top" id="16h-VR-3rc"/>
+                            <constraint firstItem="JV8-JU-ybH" firstAttribute="leading" secondItem="oPy-24-Q3N" secondAttribute="leading" id="FkK-7z-vbV"/>
+                            <constraint firstItem="JV8-JU-ybH" firstAttribute="trailing" secondItem="oPy-24-Q3N" secondAttribute="trailing" id="hj8-Tw-aeX"/>
+                            <constraint firstItem="JV8-JU-ybH" firstAttribute="bottom" secondItem="oPy-24-Q3N" secondAttribute="bottom" id="t1R-Jv-S4o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oPy-24-Q3N"/>
                     </view>
+                    <navigationItem key="navigationItem" title="การกินยา" id="GcE-k5-pYM">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="jNH-Qe-QZ1">
+                            <connections>
+                                <segue destination="W8f-2x-8EN" kind="show" id="Gs2-yy-bHS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pillTableView" destination="JV8-JU-ybH" id="7nF-SW-hY2"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0c9-Ah-Zur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5i3-Su-0Xv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4100" y="34"/>
+            <point key="canvasLocation" x="3046" y="33"/>
         </scene>
     </scenes>
     <resources>

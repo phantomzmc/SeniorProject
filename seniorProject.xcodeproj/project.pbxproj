@@ -29,7 +29,6 @@
 		2A2E64E42017BA8C0078F9D8 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A2E64E32017BA890078F9D8 /* 3.jpg */; };
 		2A2E64E62017BA930078F9D8 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A2E64E52017BA910078F9D8 /* 4.jpg */; };
 		2A44C61F20026FDE006C287D /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A44C61E20026FDE006C287D /* DetailEventViewController.swift */; };
-		2A4789141FCB3910006FB79E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4789131FCB3910006FB79E /* AppDelegate.swift */; };
 		2A4789161FCB3910006FB79E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4789151FCB3910006FB79E /* ViewController.swift */; };
 		2A4789191FCB3910006FB79E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4789171FCB3910006FB79E /* Main.storyboard */; };
 		2A47891C1FCB3910006FB79E /* seniorProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A47891A1FCB3910006FB79E /* seniorProject.xcdatamodeld */; };
@@ -47,6 +46,9 @@
 		2AAD62381FFEBC12009752D4 /* SOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD62371FFEBC12009752D4 /* SOSViewController.swift */; };
 		2AD12AF9203B177C00209DE0 /* AddPillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD12AF8203B177C00209DE0 /* AddPillViewController.swift */; };
 		2AD12AFB203B504E00209DE0 /* PillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD12AFA203B504E00209DE0 /* PillData.swift */; };
+		2AD12AFD203B5EB400209DE0 /* PillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD12AFC203B5EB400209DE0 /* PillTableViewCell.swift */; };
+		2AD12AFF203B5EE100209DE0 /* PillShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD12AFE203B5EE100209DE0 /* PillShowTableViewController.swift */; };
+		2AD12B07203B714A00209DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD12B06203B714900209DE0 /* AppDelegate.swift */; };
 		2AD87CEF2013991B00B660AA /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD87CEE2013991B00B660AA /* EmptySegue.swift */; };
 		2AD87CF1201399AE00B660AA /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD87CF0201399AE00B660AA /* ContainerViewController.swift */; };
 		2AD87CF320139C8E00B660AA /* DataHealtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD87CF220139C8E00B660AA /* DataHealtyViewController.swift */; };
@@ -80,7 +82,6 @@
 		2A2E64E52017BA910078F9D8 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		2A44C61E20026FDE006C287D /* DetailEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
 		2A4789101FCB3910006FB79E /* seniorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seniorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A4789131FCB3910006FB79E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A4789151FCB3910006FB79E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A4789181FCB3910006FB79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A47891B1FCB3910006FB79E /* seniorProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = seniorProject.xcdatamodel; sourceTree = "<group>"; };
@@ -105,6 +106,9 @@
 		2AAD62371FFEBC12009752D4 /* SOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSViewController.swift; sourceTree = "<group>"; };
 		2AD12AF8203B177C00209DE0 /* AddPillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPillViewController.swift; sourceTree = "<group>"; };
 		2AD12AFA203B504E00209DE0 /* PillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillData.swift; sourceTree = "<group>"; };
+		2AD12AFC203B5EB400209DE0 /* PillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillTableViewCell.swift; sourceTree = "<group>"; };
+		2AD12AFE203B5EE100209DE0 /* PillShowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillShowTableViewController.swift; sourceTree = "<group>"; };
+		2AD12B06203B714900209DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = seniorProject/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		2AD87CEE2013991B00B660AA /* EmptySegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
 		2AD87CF0201399AE00B660AA /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		2AD87CF220139C8E00B660AA /* DataHealtyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHealtyViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			children = (
 				2A00F95B20020F630035D550 /* EventsTableViewCell.swift */,
 				2AD87CF42013A66300B660AA /* FeedHealtyTableViewCell.swift */,
+				2AD12AFC203B5EB400209DE0 /* PillTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -186,11 +191,12 @@
 		2A4789121FCB3910006FB79E /* seniorProject */ = {
 			isa = PBXGroup;
 			children = (
+				2AD12B00203B6A6700209DE0 /* Container */,
 				2AD87CEB201398AC00B660AA /* View */,
 				2AA85C0C1FE6E3E200184C90 /* Model */,
 				2AA85C081FE6D83A00184C90 /* Controller */,
-				2A4789131FCB3910006FB79E /* AppDelegate.swift */,
 				2A4789171FCB3910006FB79E /* Main.storyboard */,
+				2AD12B06203B714900209DE0 /* AppDelegate.swift */,
 				2A47891D1FCB3910006FB79E /* Assets.xcassets */,
 				2A47891F1FCB3910006FB79E /* LaunchScreen.storyboard */,
 				2A4789221FCB3911006FB79E /* Info.plist */,
@@ -203,6 +209,7 @@
 		2AA85C081FE6D83A00184C90 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2AD12B01203B6A9600209DE0 /* Add */,
 				2A2E64C92015BEE20078F9D8 /* Cell */,
 				2A4789151FCB3910006FB79E /* ViewController.swift */,
 				2AA85C091FE6D85800184C90 /* LoginViewController.swift */,
@@ -212,15 +219,11 @@
 				2A00F959200168450035D550 /* EventsTableViewController.swift */,
 				2A44C61E20026FDE006C287D /* DetailEventViewController.swift */,
 				2A7C0D7C20131F18005A38A1 /* HealtyViewController.swift */,
-				2AD87CF0201399AE00B660AA /* ContainerViewController.swift */,
 				2AD87CF220139C8E00B660AA /* DataHealtyViewController.swift */,
 				2AD87CF62013A79500B660AA /* FeedHealtyTableViewController.swift */,
-				2A2E64CA2015C3C20078F9D8 /* ProfileContainerViewController.swift */,
 				2A2E64CC2016102E0078F9D8 /* ShowProfileViewController.swift */,
 				2A2E64CE2016103F0078F9D8 /* EditProfileViewController.swift */,
-				2A12659220211313008E0CFB /* AddEventViewController.swift */,
-				2A0B01DE202CD9F900F49400 /* AddDataHealtyViewController.swift */,
-				2AD12AF8203B177C00209DE0 /* AddPillViewController.swift */,
+				2AD12AFE203B5EE100209DE0 /* PillShowTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -237,6 +240,25 @@
 				2AD12AFA203B504E00209DE0 /* PillData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2AD12B00203B6A6700209DE0 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				2AD87CF0201399AE00B660AA /* ContainerViewController.swift */,
+				2A2E64CA2015C3C20078F9D8 /* ProfileContainerViewController.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		2AD12B01203B6A9600209DE0 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				2A12659220211313008E0CFB /* AddEventViewController.swift */,
+				2A0B01DE202CD9F900F49400 /* AddDataHealtyViewController.swift */,
+				2AD12AF8203B177C00209DE0 /* AddPillViewController.swift */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 		2AD87CEB201398AC00B660AA /* View */ = {
@@ -433,6 +455,8 @@
 				2A2E64DD2017B13D0078F9D8 /* EventData.swift in Sources */,
 				2AD87CF1201399AE00B660AA /* ContainerViewController.swift in Sources */,
 				2AE2C12D2019B7C2009839BF /* HealthData.swift in Sources */,
+				2AD12B07203B714A00209DE0 /* AppDelegate.swift in Sources */,
+				2AD12AFD203B5EB400209DE0 /* PillTableViewCell.swift in Sources */,
 				2A126595202115BC008E0CFB /* AddEvent.swift in Sources */,
 				2A47891C1FCB3910006FB79E /* seniorProject.xcdatamodeld in Sources */,
 				2A00F95C20020F630035D550 /* EventsTableViewCell.swift in Sources */,
@@ -447,7 +471,6 @@
 				2A0B01E1202CE08D00F49400 /* DataBMI.swift in Sources */,
 				2AD12AF9203B177C00209DE0 /* AddPillViewController.swift in Sources */,
 				2AAD62381FFEBC12009752D4 /* SOSViewController.swift in Sources */,
-				2A4789141FCB3910006FB79E /* AppDelegate.swift in Sources */,
 				2A0B01DF202CD9F900F49400 /* AddDataHealtyViewController.swift in Sources */,
 				2A600D271FFED3C10097EC7B /* ProfileViewController.swift in Sources */,
 				2A2E64CB2015C3C20078F9D8 /* ProfileContainerViewController.swift in Sources */,
@@ -455,6 +478,7 @@
 				2AA85C0E1FE6E40800184C90 /* Const.swift in Sources */,
 				2A7C0D7D20131F18005A38A1 /* HealtyViewController.swift in Sources */,
 				2A2E64CF2016103F0078F9D8 /* EditProfileViewController.swift in Sources */,
+				2AD12AFF203B5EE100209DE0 /* PillShowTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
