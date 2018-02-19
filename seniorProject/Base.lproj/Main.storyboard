@@ -1451,17 +1451,37 @@
             </objects>
             <point key="canvasLocation" x="5698.5507246376819" y="-452.44565217391306"/>
         </scene>
-        <!--View Controller-->
+        <!--การกินยา-->
         <scene sceneID="luc-lF-UZp">
             <objects>
                 <viewController id="yXk-hb-faM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NBf-za-6Er">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEo-ed-frd">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <connections>
+                                    <segue destination="qJC-UU-wXa" kind="embed" id="JD9-Wn-xzL"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rEo-ed-frd" firstAttribute="top" secondItem="DTy-Ws-3jc" secondAttribute="top" id="1tU-5T-o9h"/>
+                            <constraint firstItem="DTy-Ws-3jc" firstAttribute="bottom" secondItem="rEo-ed-frd" secondAttribute="bottom" id="KxH-Xy-mdC"/>
+                            <constraint firstItem="DTy-Ws-3jc" firstAttribute="trailing" secondItem="rEo-ed-frd" secondAttribute="trailing" id="XFm-mm-l86"/>
+                            <constraint firstItem="rEo-ed-frd" firstAttribute="leading" secondItem="DTy-Ws-3jc" secondAttribute="leading" id="j27-YE-frm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DTy-Ws-3jc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="R84-Zt-8dg"/>
+                    <navigationItem key="navigationItem" title="การกินยา" id="R84-Zt-8dg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KHl-Yp-0uy">
+                            <connections>
+                                <segue destination="W8f-2x-8EN" kind="show" id="Wab-Nr-N76"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTO-xY-cZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1612,11 +1632,11 @@
             </objects>
             <point key="canvasLocation" x="2183" y="-1604"/>
         </scene>
-        <!--ติดต่อสื่อสาร-->
+        <!--เตือนการกินยา-->
         <scene sceneID="aa2-6I-cqf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PI7-J3-cAn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ติดต่อสื่อสาร" image="speech-bubble (1)" id="znG-4R-nqN"/>
+                    <tabBarItem key="tabBarItem" title="เตือนการกินยา" image="speech-bubble (1)" id="znG-4R-nqN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CgH-qC-4vB">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -1953,6 +1973,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="DFQ-q5-b7D"/>
                     </view>
                     <connections>
                         <segue destination="SrZ-pF-Ch2" kind="custom" identifier="showprofile" customClass="EmptySegue" customModule="seniorProject" customModuleProvider="target" id="Uz7-nn-8CY"/>
@@ -1962,6 +1983,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NpK-xc-Zkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3962" y="1520"/>
+        </scene>
+        <!--เพิ่มการกินยา-->
+        <scene sceneID="bV8-6C-dnF">
+            <objects>
+                <viewController id="W8f-2x-8EN" customClass="AddPillViewController" customModule="seniorProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zHJ-Gt-ei4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ชื่อยา" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDI-9X-cR5">
+                                <rect key="frame" x="20" y="100" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qFz-BH-uPt">
+                                <rect key="frame" x="49" y="182" width="317" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="s31-BP-XsZ"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rYb-nO-2SX">
+                                <rect key="frame" x="49" y="387" width="317" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="3JC-n9-jM4"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ก่อนอาหาร-หลังอาหาร : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50u-rf-3ea">
+                                <rect key="frame" x="20" y="153" width="186" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="เวลารับประทาน : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y1-mx-KKj">
+                                <rect key="frame" x="20" y="358" width="186" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFl-NI-Y9u">
+                                <rect key="frame" x="49" y="578" width="317" height="40"/>
+                                <color key="backgroundColor" red="0.56396174430847168" green="0.99656981229782104" blue="0.69098055362701416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ยืนยัน">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDataPillWithSender:" destination="W8f-2x-8EN" eventType="touchUpInside" id="RqJ-7M-gJa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ก่อน &amp; หลัง" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mao-2f-Fkb">
+                                <rect key="frame" x="207" y="153" width="152" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ช่วงเวลา" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP2-r5-jK9">
+                                <rect key="frame" x="153" y="357" width="213" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aFl-NI-Y9u" firstAttribute="top" secondItem="rYb-nO-2SX" secondAttribute="bottom" constant="50" id="0yQ-Gx-YK7"/>
+                            <constraint firstItem="4y1-mx-KKj" firstAttribute="top" secondItem="qFz-BH-uPt" secondAttribute="bottom" constant="35" id="6rA-Qf-Nn3"/>
+                            <constraint firstItem="Tp3-q5-bdi" firstAttribute="bottom" secondItem="aFl-NI-Y9u" secondAttribute="bottom" constant="69" id="CSs-bS-6t9"/>
+                            <constraint firstItem="rYb-nO-2SX" firstAttribute="top" secondItem="4y1-mx-KKj" secondAttribute="bottom" constant="8" id="HDQ-3y-VrJ"/>
+                            <constraint firstItem="Tp3-q5-bdi" firstAttribute="trailing" secondItem="VDI-9X-cR5" secondAttribute="trailing" constant="20" id="Ifr-rC-rTm"/>
+                            <constraint firstItem="Tp3-q5-bdi" firstAttribute="trailing" secondItem="qFz-BH-uPt" secondAttribute="trailing" constant="48" id="M52-u0-0tZ"/>
+                            <constraint firstItem="aFl-NI-Y9u" firstAttribute="leading" secondItem="Tp3-q5-bdi" secondAttribute="leading" constant="49" id="MIK-NY-r3h"/>
+                            <constraint firstItem="rYb-nO-2SX" firstAttribute="leading" secondItem="Tp3-q5-bdi" secondAttribute="leading" constant="49" id="O22-P8-BG3"/>
+                            <constraint firstItem="qFz-BH-uPt" firstAttribute="top" secondItem="50u-rf-3ea" secondAttribute="bottom" constant="8" id="Q2n-mY-ZI5"/>
+                            <constraint firstItem="VDI-9X-cR5" firstAttribute="leading" secondItem="Tp3-q5-bdi" secondAttribute="leading" constant="20" id="T5D-sg-vYF"/>
+                            <constraint firstItem="Tp3-q5-bdi" firstAttribute="trailing" secondItem="aFl-NI-Y9u" secondAttribute="trailing" constant="48" id="fC4-Gc-HhB"/>
+                            <constraint firstItem="Tp3-q5-bdi" firstAttribute="trailing" secondItem="rYb-nO-2SX" secondAttribute="trailing" constant="48" id="hFe-KF-sR7"/>
+                            <constraint firstItem="4y1-mx-KKj" firstAttribute="leading" secondItem="Tp3-q5-bdi" secondAttribute="leading" constant="20" id="je6-I9-TUO"/>
+                            <constraint firstItem="50u-rf-3ea" firstAttribute="top" secondItem="VDI-9X-cR5" secondAttribute="bottom" constant="23" id="oDq-Qv-nje"/>
+                            <constraint firstItem="qFz-BH-uPt" firstAttribute="leading" secondItem="Tp3-q5-bdi" secondAttribute="leading" constant="49" id="uRd-ED-c3f"/>
+                            <constraint firstItem="VDI-9X-cR5" firstAttribute="top" secondItem="Tp3-q5-bdi" secondAttribute="top" constant="36" id="vWd-bW-SCB"/>
+                            <constraint firstItem="50u-rf-3ea" firstAttribute="leading" secondItem="Tp3-q5-bdi" secondAttribute="leading" constant="20" id="xo4-uy-qeD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tp3-q5-bdi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="เพิ่มการกินยา" id="dFL-dw-N7m"/>
+                    <connections>
+                        <outlet property="eakLabel" destination="Mao-2f-Fkb" id="KaN-Z7-mmb"/>
+                        <outlet property="eakPicker" destination="qFz-BH-uPt" id="z3P-Ip-cxV"/>
+                        <outlet property="namepillTextField" destination="VDI-9X-cR5" id="yo6-oZ-0KX"/>
+                        <outlet property="timeLabel" destination="EP2-r5-jK9" id="ENH-i5-eSN"/>
+                        <outlet property="timePicker" destination="rYb-nO-2SX" id="oXW-D1-U4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BB1-eE-Jhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6856.521739130435" y="79.891304347826093"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Osz-GT-oDP">
+            <objects>
+                <viewController id="qJC-UU-wXa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oVb-R4-dt6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0c9-Ah-Zur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4100" y="34"/>
         </scene>
     </scenes>
     <resources>

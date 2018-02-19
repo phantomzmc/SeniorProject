@@ -34,25 +34,25 @@ class DataHealtyViewController: UIViewController {
         let displayname = Auth.auth().currentUser?.displayName
         ref.child("Member").child(displayname!).child("Health").observeSingleEvent(of:
             .value, with: { (snapshot) in
-                
+
                 let value = snapshot.value as? NSDictionary
                 let weigth = value?["weigth"] as? String ?? ""
                 let higth = value?["higth"] as? String ?? ""
                 let pillSafe = value?["pillsafe"] as? String ?? ""
                 let hospital = value?["hospital"] as? String ?? ""
-                
+
                 print("weigth:" + (weigth))
                 print("higth:" + (higth))
                 print("pillSafe:" + (pillSafe))
                 print("hospital:" + (hospital))
 
-                
+
                 self.weigthLabel.text = weigth
                 self.heigthLabel.text = higth
                 self.pillSafeLabel.text = pillSafe
                 self.hospitalLabel.text = hospital
 
-                
+
         })
 //        func CalBMI () {
 //            var calWeigth: Int? = Int(weigthLabel.text!)
