@@ -26,6 +26,8 @@ class DataHealtyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         viewCA?.layer.cornerRadius = 25
         viewPill?.layer.cornerRadius = 25
         viewHeigh?.layer.cornerRadius = 25
@@ -54,18 +56,6 @@ class DataHealtyViewController: UIViewController {
 
 
         })
-//        func CalBMI () {
-//            var calWeigth: Int? = Int(weigthLabel.text!)
-//            var calHeigth: Int? = Int(heigthLabel.text!)
-//            var calbmi = calWeigth!/(calHeigth!*calHeigth!)
-//            print(calbmi)
-//        }
-        
-        
-
-        
-
-        // Do any additional setup after loading the view.
     }
 
 

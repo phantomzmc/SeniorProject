@@ -98,7 +98,7 @@ class AddPillViewController: UIViewController,UIPickerViewDataSource,UIPickerVie
         let addPill = PillData (namePill: namePill!, eakPill: eakPill!, timePill: timePill!)
         let addPillRef = self.ref.child(displayname!).child("PillData").childByAutoId()
         addPillRef.setValue(addPill.toAnyObject())
-        let alert = UIAlertController(title: "สำเร็จ", message: (namePill), preferredStyle: .alert)
+        let alert = UIAlertController(title: "สำเร็จ", message: "ยา : \(String(describing: namePill))", preferredStyle: .alert)
         let resultAlert = UIAlertAction(title: "OK", style: .default , handler: { (alertAction) in
             self.navigationController?.popViewController(animated: true)
         })

@@ -19,7 +19,7 @@ class FeedHealtyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request("http://www.mocky.io/v2/5a6987902e0000610f7a74af").responseJSON { response in
+        Alamofire.request("http://www.mocky.io/v2/5a8d7e042f000049004f237f").responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
             print("Result: \(response.result)")                         // response serialization result
@@ -29,7 +29,7 @@ class FeedHealtyTableViewController: UITableViewController {
                 
                 let dict:NSDictionary = json as! NSDictionary
                 
-                let healthArray = dict.object(forKey: "health") as! NSArray
+                let healthArray = dict.object(forKey: "items") as! NSArray
                 
                 for healthJson in healthArray {
                     let healthDict = healthJson as! NSDictionary

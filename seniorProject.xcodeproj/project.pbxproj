@@ -28,6 +28,7 @@
 		2A2E64E22017BA850078F9D8 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A2E64E12017BA820078F9D8 /* 2.jpg */; };
 		2A2E64E42017BA8C0078F9D8 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A2E64E32017BA890078F9D8 /* 3.jpg */; };
 		2A2E64E62017BA930078F9D8 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A2E64E52017BA910078F9D8 /* 4.jpg */; };
+		2A37F96E203DD7A300B94B28 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F96D203DD7A100B94B28 /* map.png */; };
 		2A44C61F20026FDE006C287D /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A44C61E20026FDE006C287D /* DetailEventViewController.swift */; };
 		2A4789161FCB3910006FB79E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4789151FCB3910006FB79E /* ViewController.swift */; };
 		2A4789191FCB3910006FB79E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4789171FCB3910006FB79E /* Main.storyboard */; };
@@ -49,6 +50,9 @@
 		2AD12AFD203B5EB400209DE0 /* PillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD12AFC203B5EB400209DE0 /* PillTableViewCell.swift */; };
 		2AD12AFF203B5EE100209DE0 /* PillShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD12AFE203B5EE100209DE0 /* PillShowTableViewController.swift */; };
 		2AD12B07203B714A00209DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD12B06203B714900209DE0 /* AppDelegate.swift */; };
+		2AD12B09203D4DD000209DE0 /* alarm-clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD12B08203D4DCE00209DE0 /* alarm-clock.png */; };
+		2AD12B0B203D4E8E00209DE0 /* cutlery.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD12B0A203D4E8900209DE0 /* cutlery.png */; };
+		2AD12B0D203D598F00209DE0 /* medicine.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD12B0C203D598E00209DE0 /* medicine.png */; };
 		2AD87CEF2013991B00B660AA /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD87CEE2013991B00B660AA /* EmptySegue.swift */; };
 		2AD87CF1201399AE00B660AA /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD87CF0201399AE00B660AA /* ContainerViewController.swift */; };
 		2AD87CF320139C8E00B660AA /* DataHealtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD87CF220139C8E00B660AA /* DataHealtyViewController.swift */; };
@@ -80,6 +84,7 @@
 		2A2E64E12017BA820078F9D8 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		2A2E64E32017BA890078F9D8 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		2A2E64E52017BA910078F9D8 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		2A37F96D203DD7A100B94B28 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		2A44C61E20026FDE006C287D /* DetailEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
 		2A4789101FCB3910006FB79E /* seniorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seniorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4789151FCB3910006FB79E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +114,9 @@
 		2AD12AFC203B5EB400209DE0 /* PillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillTableViewCell.swift; sourceTree = "<group>"; };
 		2AD12AFE203B5EE100209DE0 /* PillShowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillShowTableViewController.swift; sourceTree = "<group>"; };
 		2AD12B06203B714900209DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = seniorProject/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		2AD12B08203D4DCE00209DE0 /* alarm-clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-clock.png"; sourceTree = "<group>"; };
+		2AD12B0A203D4E8900209DE0 /* cutlery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery.png; sourceTree = "<group>"; };
+		2AD12B0C203D598E00209DE0 /* medicine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medicine.png; sourceTree = "<group>"; };
 		2AD87CEE2013991B00B660AA /* EmptySegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
 		2AD87CF0201399AE00B660AA /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		2AD87CF220139C8E00B660AA /* DataHealtyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHealtyViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				2A2E64DF2017BA760078F9D8 /* 1.jpg */,
+				2AD12B08203D4DCE00209DE0 /* alarm-clock.png */,
+				2AD12B0C203D598E00209DE0 /* medicine.png */,
+				2A37F96D203DD7A100B94B28 /* map.png */,
+				2AD12B0A203D4E8900209DE0 /* cutlery.png */,
 				2A2E64E12017BA820078F9D8 /* 2.jpg */,
 				2A2E64E32017BA890078F9D8 /* 3.jpg */,
 				2A2E64E52017BA910078F9D8 /* 4.jpg */,
@@ -359,14 +371,18 @@
 				2A2E64E62017BA930078F9D8 /* 4.jpg in Resources */,
 				2A2E64E42017BA8C0078F9D8 /* 3.jpg in Resources */,
 				2A770EB9202E2308001F1708 /* phone-receiver.png in Resources */,
+				2A37F96E203DD7A300B94B28 /* map.png in Resources */,
 				2A770EBB202E2314001F1708 /* home.png in Resources */,
 				2A4789211FCB3910006FB79E /* LaunchScreen.storyboard in Resources */,
+				2AD12B0B203D4E8E00209DE0 /* cutlery.png in Resources */,
+				2AD12B0D203D598F00209DE0 /* medicine.png in Resources */,
 				2AA85C071FE622A700184C90 /* GoogleService-Info.plist in Resources */,
 				2A2E64E22017BA850078F9D8 /* 2.jpg in Resources */,
 				2A2E64D72016E0230078F9D8 /* height.png in Resources */,
 				2A47891E1FCB3910006FB79E /* Assets.xcassets in Resources */,
 				2A770EB7202E22FF001F1708 /* multiple-users-silhouette.png in Resources */,
 				2A2E64D92016E0230078F9D8 /* pills.png in Resources */,
+				2AD12B09203D4DD000209DE0 /* alarm-clock.png in Resources */,
 				2A2E64DA2016E0230078F9D8 /* weight.png in Resources */,
 				2A2E64E02017BA790078F9D8 /* 1.jpg in Resources */,
 				2A2E64D82016E0230078F9D8 /* medical-kit.png in Resources */,
@@ -388,6 +404,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -398,6 +415,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",

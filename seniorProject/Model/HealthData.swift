@@ -19,9 +19,9 @@ class HealthData : NSObject {
         self.healthPic = healthPic
     }
     init (json:NSDictionary?){
-        self.healthName = json?.object(forKey:"name") as! String
-        self.healthDetail = json?.object(forKey:"detail") as! String
-        self.healthPic = json?.object(forKey:"pic") as! String
+        self.healthName = json?.object(forKey:"title") as! String
+        self.healthDetail = json?.object(forKey:"link") as! String
+        self.healthPic = json?.object(forKey:"thumbnail") as! String
 
     }
     

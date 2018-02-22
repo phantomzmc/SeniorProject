@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class PillShowViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+    
+    var dataPill = [PillData]()
     
     @IBOutlet weak var pillTableView : UITableView!
 
@@ -18,11 +22,26 @@ class PillShowViewController: UIViewController,UITableViewDelegate,UITableViewDa
         pillTableView.delegate = self
         pillTableView.dataSource = self
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        loadFirebase()
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        }
+        func loadFirebase () {
+            let displayname = Auth.auth().currentUser?.displayName
+            print(displayname)
+            Database.database().reference().child("Member").child(displayname!).child("PillData").observe(.childAdded) { (snapshot : DataSnapshot) in
+                if let dict = snapshot.value as? [String:Any]{
+                    let namePillText = dict ["namePill"] as! String
+                    let eakPillText = dict["eakPill"] as! String
+                    let timePillText = dict["timePill"] as! String
+                    let datapill = PillData(namePill: namePillText, eakPill: eakPillText, timePill: timePillText)
+                    self.dataPill.append(datapill)
+                    print(self.dataPill)
+                    self.pillTableView.reloadData()
+                }
+//                print(snapshot.value)
+                
+        }
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,16 +58,15 @@ class PillShowViewController: UIViewController,UITableViewDelegate,UITableViewDa
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return dataPill.count
     }
 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellPill", for: indexPath) as? PillTableViewCell
-        cell?.namePill.text = "test"
-        cell?.eakPill.text = "test2"
-        cell?.timePill.text = "text3"
-
+        cell?.namePill.text = dataPill[indexPath.row].namePill
+        cell?.eakPill.text = dataPill[indexPath.row].eakPill
+        cell?.timePill.text = dataPill[indexPath.row].timePill
         return cell!
     }
 

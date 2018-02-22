@@ -9,7 +9,6 @@
 import UIKit
 
 class EventsTableViewCell: UITableViewCell {
-    @IBOutlet weak var eventImageView : UIImageView!
     @IBOutlet weak var eventDateLabel : UILabel!
     @IBOutlet weak var eventMonthLabel : UILabel!
     @IBOutlet weak var eventNameLabel : UILabel!
