@@ -9,6 +9,8 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import UserNotifications
+
 
 class AddPillViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
@@ -31,6 +33,7 @@ class AddPillViewController: UIViewController,UIPickerViewDataSource,UIPickerVie
         timePicker.delegate = self
         timePicker.dataSource = self
         
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in })
 
         // Do any additional setup after loading the view.
     }
@@ -98,8 +101,19 @@ class AddPillViewController: UIViewController,UIPickerViewDataSource,UIPickerVie
         let addPill = PillData (namePill: namePill!, eakPill: eakPill!, timePill: timePill!)
         let addPillRef = self.ref.child(displayname!).child("PillData").childByAutoId()
         addPillRef.setValue(addPill.toAnyObject())
-        let alert = UIAlertController(title: "สำเร็จ", message: "ยา : \(String(describing: namePill))", preferredStyle: .alert)
+        let alert = UIAlertController(title: "สำเร็จ", message: "", preferredStyle: .alert)
         let resultAlert = UIAlertAction(title: "OK", style: .default , handler: { (alertAction) in
+            let content = UNMutableNotificationContent()
+            content.title = namePill!
+            content.subtitle = "ทาน : " + eakPill!
+            content.body = "รับประทานตอน : " + timePill!
+            content.badge = 1
+            content.sound = UNNotificationSound.default()
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 30, repeats: false)
+            let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
             self.navigationController?.popViewController(animated: true)
         })
         alert.addAction(resultAlert)

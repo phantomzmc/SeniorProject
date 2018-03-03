@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import UserNotifications
 
 class AddEventViewController: UIViewController {
 
@@ -21,6 +22,9 @@ class AddEventViewController: UIViewController {
     @IBOutlet weak var detailEvent : UITextField!
     @IBOutlet weak var dateEvent : UITextField!
     @IBOutlet weak var monthEvent : UITextField!
+    @IBOutlet weak var timerEvent : UITextField!
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,17 +35,11 @@ class AddEventViewController: UIViewController {
 //                print(self.userName)
             let currentUser = Auth.auth().currentUser
             print(currentUser?.displayName)
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in })
+
             
             }
         }
-
-
-        // Do any additional setup after loading the view.
-    
-    
-    
-
-
 
 
     override func didReceiveMemoryWarning() {
@@ -54,19 +52,30 @@ class AddEventViewController: UIViewController {
         let detailEvent = self.detailEvent.text
         let dateEvent = self.dateEvent.text
         let monthEvent = self.monthEvent.text
+        let timerEvent = self.timerEvent.text
         
         self.ref = Database.database().reference(withPath:"Member")
-        let addEventData = AddEvent (nameEvent: nameEvent!, detailEvent: detailEvent!, dateEvent: dateEvent!, monthEvent: monthEvent!)
+        let addEventData = AddEvent (nameEvent: nameEvent!, detailEvent: detailEvent!, dateEvent: dateEvent!, monthEvent: monthEvent!,timerEvent : timerEvent!)
         let addEventRef = self.ref.child(displayname!).child("Event").child(nameEvent!)
         addEventRef.setValue(addEventData.toAnyObject())
         let alert = UIAlertController(title: "สำเร็จ", message: "เพิ่มรายการสำเร็จ", preferredStyle: .alert)
         let resultAlert = UIAlertAction(title: "OK", style: .default , handler: { (alertAction) in
+            let content = UNMutableNotificationContent()
+            content.title = nameEvent!
+            content.subtitle = detailEvent!
+            content.body = " วันที่ " + dateEvent! + " เดือน " + monthEvent! + " เวลา :" + timerEvent!
+            content.badge = 1
+            content.sound = UNNotificationSound.default()
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 30, repeats: false)
+            let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
             self.navigationController?.popViewController(animated: true)
         })
         alert.addAction(resultAlert)
         self.present(alert, animated: true, completion: nil)
         return
-        
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

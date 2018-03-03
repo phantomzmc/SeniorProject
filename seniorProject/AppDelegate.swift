@@ -11,6 +11,7 @@ import CoreData
 import Firebase
 import UIColor_Hex_Swift
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -27,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+
         
         return true
     }

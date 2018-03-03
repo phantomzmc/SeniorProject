@@ -9,11 +9,14 @@
 import UIKit
 //import FirebaseDatabase
 import FirebaseAuth
+import CoreLocation
 
 
-class SOSViewController: UIViewController {
+
+class SOSViewController: UIViewController, CLLocationManagerDelegate{
     
 //    let ref = Database.database().reference()
+    let locationManager:CLLocationManager = CLLocationManager()
     
 
     @IBOutlet weak var SOSbuntton: UIButton!
@@ -23,10 +26,10 @@ class SOSViewController: UIViewController {
         super.viewDidLoad()
         
         SOSbuntton.layer.cornerRadius = 100
-        
         Telbutton.layer.cornerRadius = 100
         
-        // Do any additional setup after loading the view.
+
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,13 +39,17 @@ class SOSViewController: UIViewController {
     
     @IBAction func SOSbutton (sender : Any) {
         if let phoneCallURL = URL(string: "tel://1669") {
-            
             let application:UIApplication = UIApplication.shared
             if (application.canOpenURL(phoneCallURL)) {
                 application.open(phoneCallURL, options: [:], completionHandler: nil)
             }
         }
-        
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        locationManager.distanceFilter = 100
+        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: CLLocationCoordinate2DMake(43.61871, -116.214607), radius: 100, identifier: "Boise")
+        locationManager.startMonitoring(for: geoFenceRegion)
     }
     @IBAction func Telbutton (sender : Any) {
         
@@ -54,24 +61,33 @@ class SOSViewController: UIViewController {
                 application.open(phoneCallURL, options: [:], completionHandler: nil)
             }
         }
-//        let displayname = Auth.auth().currentUser?.displayName
-//        ref.child("Member").child(displayname!).child("Profile").child("sosTel").observeSingleEvent(of:
-//            .value, with: { (snapshot) in
-//
-//                let value = snapshot.value as? NSDictionary
-//                let SOStel = value?["sosTel"] as? String ?? ""
-//
-//                let phoneNumber = SOStel
-//                if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
-//
-//                    let application:UIApplication = UIApplication.shared
-//                    if (application.canOpenURL(phoneCallURL)) {
-//                        application.open(phoneCallURL, options: [:], completionHandler: nil)
-//                    }
-//                }
-//        })
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        locationManager.distanceFilter = 100
+        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: CLLocationCoordinate2DMake(43.61871, -116.214607), radius: 100, identifier: "Boise")
+        locationManager.startMonitoring(for: geoFenceRegion)
+        
         
     }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        for currentLocation in locations{
+            print("\(index): \(currentLocation)")
+            
+            // "0: [locations]"
+        }
+    }
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("Entered: \(region.identifier)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print("Exited: \(region.identifier)")
+    }
+
+
+    
 
     /*
     // MARK: - Navigation

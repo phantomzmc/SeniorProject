@@ -64,9 +64,11 @@ class EventsTableViewController: UITableViewController {
                     let eventName = dict["nameEvent"] as! String
                     let eventDetail = dict["detailEvent"] as! String
                     let eventDate = dict["dateEvent"] as! String
-                    let evenMonth = dict["monthEvent"] as! String
+                    let eventMonth = dict["monthEvent"] as! String
+                    let eventTime = dict["timerEvent"] as! String
                     
-                    let eventData = EventData(eventName: eventName, eventDetail: eventDetail, eventDate: eventDate, eventMonth: evenMonth)
+                    
+                    let eventData = EventData (eventName: eventName, eventDetail: eventDetail, eventDate: eventDate, eventMonth: eventMonth ,eventTime : eventTime)
                     self.eventsdata.append(eventData)
                     print(snapshot.value)
                     print(self.eventsdata)
@@ -76,10 +78,6 @@ class EventsTableViewController: UITableViewController {
                 
             }
         }
-
-
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -105,12 +103,16 @@ class EventsTableViewController: UITableViewController {
         cell?.eventDateLabel.text = eventsdata[indexPath.row].eventDate
         cell?.eventDetailLabel.text = eventsdata[indexPath.row].eventDetail
         cell?.eventMonthLabel.text = eventsdata[indexPath.row].eventMonth
+        cell?.eventTimeLabel.text = eventsdata[indexPath.row].eventTime
         return cell!
     }
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        print(eventsdata[indexPath.row])
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: eventsdata[indexPath.row].eventName,
+                                      message: "ที่ : " + eventsdata[indexPath.row].eventDetail! + "\nวันที่ : " + eventsdata[indexPath.row].eventDate! + " เดือน : " + eventsdata[indexPath.row].eventMonth! + "\nเวลา : " + eventsdata[indexPath.row].eventTime!,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 
 
 }

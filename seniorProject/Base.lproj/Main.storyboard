@@ -747,6 +747,7 @@
                                     <outlet property="eventDetailLabel" destination="2QN-kH-atc" id="8A1-ZH-Ilf"/>
                                     <outlet property="eventMonthLabel" destination="WqQ-LT-dbO" id="C1H-z9-x8d"/>
                                     <outlet property="eventNameLabel" destination="FnC-oj-A8w" id="2l5-QL-rY0"/>
+                                    <outlet property="eventTimeLabel" destination="YFU-hh-8F2" id="ZzZ-J9-PpH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -805,7 +806,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="รายละเอียด" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTB-Nn-M89">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="สถานที่" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTB-Nn-M89">
                                                 <rect key="frame" x="31" y="134" width="355" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -823,8 +824,14 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="เวลา" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PjQ-IA-VrN">
+                                                <rect key="frame" x="31" y="341" width="354" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuu-NB-dim">
-                                                <rect key="frame" x="31" y="353" width="355" height="30"/>
+                                                <rect key="frame" x="30" y="461" width="355" height="30"/>
                                                 <color key="backgroundColor" red="0.35548829515910485" green="0.9006029364421283" blue="0.37306182642232799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="บันทึก">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -836,20 +843,23 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="PjQ-IA-VrN" firstAttribute="top" secondItem="DHw-Co-m27" secondAttribute="bottom" constant="37" id="5rq-cy-XOw"/>
                                             <constraint firstAttribute="trailing" secondItem="WTB-Nn-M89" secondAttribute="trailing" constant="28" id="8Og-Jo-WCr"/>
-                                            <constraint firstAttribute="bottom" secondItem="kuu-NB-dim" secondAttribute="bottom" constant="617" id="8wh-P4-2Ox"/>
+                                            <constraint firstAttribute="bottom" secondItem="kuu-NB-dim" secondAttribute="bottom" constant="509" id="8wh-P4-2Ox"/>
+                                            <constraint firstAttribute="trailing" secondItem="PjQ-IA-VrN" secondAttribute="trailing" constant="29" id="AB4-DV-5w8"/>
                                             <constraint firstItem="WTB-Nn-M89" firstAttribute="leading" secondItem="l2c-AQ-bdq" secondAttribute="leading" constant="31" id="CTR-NE-1M2"/>
                                             <constraint firstItem="8YJ-Pg-JzJ" firstAttribute="top" secondItem="WTB-Nn-M89" secondAttribute="bottom" constant="43" id="Df2-a5-jwa"/>
                                             <constraint firstItem="WTB-Nn-M89" firstAttribute="top" secondItem="gbo-nW-TdW" secondAttribute="bottom" constant="35" id="H8O-Bt-IMi"/>
                                             <constraint firstItem="gbo-nW-TdW" firstAttribute="leading" secondItem="l2c-AQ-bdq" secondAttribute="leading" constant="31" id="KJZ-4F-Ple"/>
                                             <constraint firstAttribute="trailing" secondItem="8YJ-Pg-JzJ" secondAttribute="trailing" constant="28" id="N5e-jY-6FA"/>
-                                            <constraint firstAttribute="trailing" secondItem="kuu-NB-dim" secondAttribute="trailing" constant="28" id="SAL-9b-vrR"/>
+                                            <constraint firstAttribute="trailing" secondItem="kuu-NB-dim" secondAttribute="trailing" constant="29" id="SAL-9b-vrR"/>
                                             <constraint firstAttribute="trailing" secondItem="DHw-Co-m27" secondAttribute="trailing" constant="28" id="bMH-NU-6Jm"/>
-                                            <constraint firstItem="kuu-NB-dim" firstAttribute="leading" secondItem="l2c-AQ-bdq" secondAttribute="leading" constant="31" id="h6W-yA-d0Y"/>
-                                            <constraint firstItem="kuu-NB-dim" firstAttribute="top" secondItem="DHw-Co-m27" secondAttribute="bottom" constant="49" id="kTI-xL-UCZ"/>
+                                            <constraint firstItem="kuu-NB-dim" firstAttribute="leading" secondItem="l2c-AQ-bdq" secondAttribute="leading" constant="30" id="h6W-yA-d0Y"/>
+                                            <constraint firstItem="kuu-NB-dim" firstAttribute="top" secondItem="PjQ-IA-VrN" secondAttribute="bottom" constant="90" id="ikL-hd-JsU"/>
                                             <constraint firstItem="8YJ-Pg-JzJ" firstAttribute="leading" secondItem="l2c-AQ-bdq" secondAttribute="leading" constant="31" id="kqW-gr-9xL"/>
                                             <constraint firstItem="gbo-nW-TdW" firstAttribute="top" secondItem="l2c-AQ-bdq" secondAttribute="top" constant="69" id="p9O-yR-wKo"/>
                                             <constraint firstItem="DHw-Co-m27" firstAttribute="top" secondItem="8YJ-Pg-JzJ" secondAttribute="bottom" constant="37" id="qlk-io-h2n"/>
+                                            <constraint firstItem="PjQ-IA-VrN" firstAttribute="leading" secondItem="l2c-AQ-bdq" secondAttribute="leading" constant="31" id="t5h-6a-KTb"/>
                                             <constraint firstAttribute="height" constant="1000" id="xMu-os-sHN"/>
                                             <constraint firstAttribute="trailing" secondItem="gbo-nW-TdW" secondAttribute="trailing" constant="28" id="ytJ-7N-eva"/>
                                             <constraint firstItem="DHw-Co-m27" firstAttribute="leading" secondItem="l2c-AQ-bdq" secondAttribute="leading" constant="31" id="zq7-fz-evJ"/>
@@ -880,6 +890,7 @@
                         <outlet property="detailEvent" destination="WTB-Nn-M89" id="zCq-ST-3fB"/>
                         <outlet property="monthEvent" destination="DHw-Co-m27" id="zef-Ha-8bV"/>
                         <outlet property="nameEvent" destination="gbo-nW-TdW" id="fmY-Yi-ZXN"/>
+                        <outlet property="timerEvent" destination="PjQ-IA-VrN" id="jBI-yM-kgg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYR-cH-nMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2136,7 +2147,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPill" rowHeight="116" id="r2U-7R-34g" customClass="PillTableViewCell" customModule="seniorProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPill" rowHeight="116" id="r2U-7R-34g" customClass="PillTableViewCell" customModule="seniorProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r2U-7R-34g" id="Sse-ff-Vwt">

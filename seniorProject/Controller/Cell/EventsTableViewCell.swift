@@ -13,6 +13,9 @@ class EventsTableViewCell: UITableViewCell {
     @IBOutlet weak var eventMonthLabel : UILabel!
     @IBOutlet weak var eventNameLabel : UILabel!
     @IBOutlet weak var eventDetailLabel : UILabel!
+    @IBOutlet weak var eventTimeLabel : UILabel!
+
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

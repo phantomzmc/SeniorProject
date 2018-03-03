@@ -45,6 +45,8 @@
 		2AA85C0A1FE6D85800184C90 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA85C091FE6D85800184C90 /* LoginViewController.swift */; };
 		2AA85C0E1FE6E40800184C90 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA85C0D1FE6E40800184C90 /* Const.swift */; };
 		2AAD62381FFEBC12009752D4 /* SOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD62371FFEBC12009752D4 /* SOSViewController.swift */; };
+		2AB05F1F204ADDCB000C3DF1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB05F1E204ADDCA000C3DF1 /* CoreLocation.framework */; };
+		2AB05F21204ADDD6000C3DF1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB05F20204ADDD6000C3DF1 /* MapKit.framework */; };
 		2AD12AF9203B177C00209DE0 /* AddPillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD12AF8203B177C00209DE0 /* AddPillViewController.swift */; };
 		2AD12AFB203B504E00209DE0 /* PillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD12AFA203B504E00209DE0 /* PillData.swift */; };
 		2AD12AFD203B5EB400209DE0 /* PillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD12AFC203B5EB400209DE0 /* PillTableViewCell.swift */; };
@@ -109,6 +111,8 @@
 		2AABD2B920113242002B678F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AABD2BA20113242002B678F /* UIColor_Hex_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIColor_Hex_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AAD62371FFEBC12009752D4 /* SOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSViewController.swift; sourceTree = "<group>"; };
+		2AB05F1E204ADDCA000C3DF1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2AB05F20204ADDD6000C3DF1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2AD12AF8203B177C00209DE0 /* AddPillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPillViewController.swift; sourceTree = "<group>"; };
 		2AD12AFA203B504E00209DE0 /* PillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillData.swift; sourceTree = "<group>"; };
 		2AD12AFC203B5EB400209DE0 /* PillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB05F21204ADDD6000C3DF1 /* MapKit.framework in Frameworks */,
+				2AB05F1F204ADDCB000C3DF1 /* CoreLocation.framework in Frameworks */,
 				57E29F86162E150D92005C23 /* Pods_seniorProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +300,8 @@
 		B896242C6436B68B7807E801 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2AB05F20204ADDD6000C3DF1 /* MapKit.framework */,
+				2AB05F1E204ADDCA000C3DF1 /* CoreLocation.framework */,
 				2AABD2B520113242002B678F /* Alamofire.framework */,
 				2AABD2B620113242002B678F /* GoogleToolboxForMac.framework */,
 				2AABD2B720113242002B678F /* GTMSessionFetcher.framework */,

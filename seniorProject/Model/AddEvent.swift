@@ -14,14 +14,16 @@ class AddEvent : NSObject {
     var detailEvent : String!
     var dateEvent : String!
     var monthEvent : String!
+    var timerEvent : String!
 //    var picEvent : String!
     let ref : DatabaseReference!
     
-    init(nameEvent : String ,detailEvent : String ,dateEvent: String ,monthEvent : String ) {
+    init(nameEvent : String ,detailEvent : String ,dateEvent: String ,monthEvent : String, timerEvent : String ) {
         self.nameEvent = nameEvent
         self.detailEvent = detailEvent
         self.dateEvent = dateEvent
         self.monthEvent = monthEvent
+        self.timerEvent = timerEvent
 //        self.picEvent = picEvent
         self.ref = nil
         
@@ -33,6 +35,7 @@ class AddEvent : NSObject {
         detailEvent = snapshotValue["detailEvent"] as! String
         dateEvent = snapshotValue["dateEvent"] as! String
         monthEvent = snapshotValue["monthEvent"] as! String
+        timerEvent = snapshotValue["timerEvent"] as! String
 //        picEvent = snapshotValue["picEvent"] as! String
 
         ref = snapshot.ref
@@ -43,6 +46,7 @@ class AddEvent : NSObject {
             "detailEvent" : detailEvent,
             "dateEvent" : dateEvent,
             "monthEvent" : monthEvent,
+            "timerEvent" : timerEvent,
 //            "picEvent" : picEvent,
 
         ]
